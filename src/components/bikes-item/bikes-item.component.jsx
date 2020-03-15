@@ -2,22 +2,27 @@ import React from "react";
 import "./bikes-item.styles.scss";
 import { Link } from "react-router-dom";
 
-export default function PrevCardStumpJumperPro29() {
+export default function BikesItem({ item }) {
   return (
-    <div className="PrevCard-StumpJumperPro29">
+    <div className="bikes-item-container" key={item.id}>
       <Link
         to="/shop/trail/stumpjumper-pro-29"
-        className="StumpJumperPro29-Image"
+        style={{
+          width: "100%",
+          height: "60%",
+          background: `url(${item.imageUrl})`,
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat"
+        }}
       />
 
-      <div className="PreviewCard-Info">
+      <div className="bikes-item-info">
         <Link to="/shop/trail/stumpjumper-pro-29" className="PreviewCard-Name">
-          StumpJumper Pro 29
+          {item.name}
         </Link>
 
-        <p className="PreviewCard-Price">$6,300.00</p>
-
-        <div className="PreviewCard-ColorIcon SJP29"></div>
+        <p className="bikes-item-price">${item.price}</p>
       </div>
     </div>
   );

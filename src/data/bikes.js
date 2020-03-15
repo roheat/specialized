@@ -52,7 +52,7 @@ const BIKE_DATA = [
         name: "Demo Racer 29",
         price: "6,500.00",
         partNumber: "No.94159-0006",
-        imageUrl: "https://i.ibb.co/stTD65b/Fuse-Expert29-Prev-Card.jpg"
+        imageUrl: "https://i.ibb.co/PjKcc04/Fuse-Expert29-Prev-Card.jpg"
       },
       {
         id: 2,

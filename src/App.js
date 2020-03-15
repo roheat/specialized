@@ -7,11 +7,15 @@ import Bikes from "./pages/bikes/bikes.component";
 
 function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/shop/bikes" component={Bikes} />
-      </Switch>
+    <div className="App">
+      <div className="AppInner">
+        <div className="AppContentWrap">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/shop/bikes" component={Bikes} />
+          </Switch>
+        </div>
+      </div>
     </div>
   );
 }
