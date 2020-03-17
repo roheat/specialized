@@ -88,7 +88,7 @@ export default class BikesMenu extends Component {
                   StumpJumper Expert 29
                 </Link>
                 <Link
-                  to="/shop/trail/stumpjumper-expert-27"
+                  to="/shop/trail/stumpjumper-expert-27-5"
                   className="BikesMenu-SecondaryText"
                 >
                   StumpJumper Expert 27.5

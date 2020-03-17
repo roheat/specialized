@@ -2,11 +2,11 @@ import React from "react";
 import "./bikes-item.styles.scss";
 import { Link } from "react-router-dom";
 
-export default function BikesItem({ item }) {
+export default function BikesItem({ item, routeName }) {
   return (
     <div className="bikes-item-container" key={item.id}>
       <Link
-        to="/shop/trail/stumpjumper-pro-29"
+        to={`/${routeName}/${item.prettyId}`}
         style={{
           width: "100%",
           height: "60%",
@@ -18,7 +18,10 @@ export default function BikesItem({ item }) {
       />
 
       <div className="bikes-item-info">
-        <Link to="/shop/trail/stumpjumper-pro-29" className="PreviewCard-Name">
+        <Link
+          to={`/${routeName}/${item.prettyId}`}
+          className="PreviewCard-Name"
+        >
           {item.name}
         </Link>
 
