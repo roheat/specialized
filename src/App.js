@@ -6,6 +6,7 @@ import Home from "./pages/home/home.component";
 import Bikes from "./pages/bikes/bikes.component";
 import FullNav from "./components/navigation/full-nav/full-nav.component";
 import MobileNav from "./components/navigation/mobile-nav/mobile-nav.component";
+import NavDrawer from "./components/navigation/nav-drawer/nav-drawer.component";
 class App extends React.Component {
   constructor() {
     super();
@@ -52,10 +53,10 @@ class App extends React.Component {
             CloseSearch={this.CloseSearch}
             SearchStatus={this.state.SearchOpen}
           />
-          {/* <NavDrawer
-          CloseDrawer={this.CloseDrawer}
-          DrawerStatus={this.state.DrawerOpen}
-        /> */}
+          <NavDrawer
+            CloseDrawer={this.CloseDrawer}
+            DrawerStatus={this.state.DrawerOpen}
+          />
           <div className="AppContentWrap">
             <Switch>
               <Route exact path="/" component={Home} />
