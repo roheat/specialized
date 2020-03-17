@@ -2,9 +2,9 @@ import React from "react";
 import "./nav-drawer.styles.scss";
 import { Link } from "react-router-dom";
 
-export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
+export default function NavDrawer({ closeDrawer, drawerStatus }) {
   let NavDrawerClasses = "NavDrawer";
-  if (DrawerStatus) {
+  if (drawerStatus) {
     NavDrawerClasses = "NavDrawer ActiveNavDrawer";
   }
 
@@ -12,7 +12,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
     <div className={NavDrawerClasses}>
       <div className="NavDrawerWrap">
         <div className="NavDrawer-Categories">
-          <div className="NavDrawer-Exit" onClick={CloseDrawer}>
+          <div className="NavDrawer-Exit" onClick={closeDrawer}>
             <div className="NavDrawer-Bar NavDrawer-Bar1"></div>
             <div className="NavDrawer-Bar NavDrawer-Bar2"></div>
           </div>
@@ -21,7 +21,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
             <div className="NavDrawer-Shop">
               <p className="NavDrawer-ShopText">SHOP</p>
             </div>
-            <div className="NavDrawer-InsideSpecialized" onClick={CloseDrawer}>
+            <div className="NavDrawer-InsideSpecialized" onClick={closeDrawer}>
               <Link
                 to="/inside-specialized"
                 className="NavDrawer-InsideSpecializedText"
@@ -38,7 +38,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
               <Link
                 to="/shop/bikes"
                 className="NavDrawer-MenuLink"
-                onClick={CloseDrawer}
+                onClick={closeDrawer}
               >
                 BIKES
               </Link>
@@ -47,7 +47,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
               <Link
                 to="/shop/trail"
                 className="NavDrawer-MenuLink"
-                onClick={CloseDrawer}
+                onClick={closeDrawer}
               >
                 TRAIL
               </Link>
@@ -56,7 +56,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
               <Link
                 to="/shop/downhill"
                 className="NavDrawer-MenuLink"
-                onClick={CloseDrawer}
+                onClick={closeDrawer}
               >
                 DOWNHILL
               </Link>
@@ -65,7 +65,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
               <Link
                 to="/shop/s-works"
                 className="NavDrawer-MenuLink"
-                onClick={CloseDrawer}
+                onClick={closeDrawer}
               >
                 S-WORKS
               </Link>
@@ -74,7 +74,7 @@ export default function NavDrawer({ CloseDrawer, DrawerStatus }) {
               <Link
                 to="/retailers"
                 className="NavDrawer-MenuLink"
-                onClick={CloseDrawer}
+                onClick={closeDrawer}
               >
                 FIND A RETAILER
               </Link>

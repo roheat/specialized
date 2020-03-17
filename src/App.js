@@ -12,50 +12,30 @@ class App extends React.Component {
     super();
 
     this.state = {
-      DrawerOpen: false,
-      SearchOpen: false,
-      QuickCartOpen: false,
-      UserSignedIn: false
+      isDrawerOpen: false,
+      isSearchOpen: false
     };
   }
 
   //Nav Drawer
-  ToggleDrawer = () => {
+  toggleDrawer = () => {
     this.setState(prevState => {
-      return { DrawerOpen: !prevState.DrawerOpen };
+      return { isDrawerOpen: !prevState.isDrawerOpen };
     });
   };
-  CloseDrawer = () => {
-    this.setState({ DrawerOpen: false });
+  closeDrawer = () => {
+    this.setState({ isDrawerOpen: false });
   };
 
-  //Search DropDown
-  ToggleSearch = () => {
-    this.setState(prevState => {
-      return { SearchOpen: !prevState.SearchOpen };
-    });
-  };
-  CloseSearch = () => {
-    this.setState({ SearchOpen: false });
-  };
   render() {
     return (
       <div className="App">
         <div className="AppInner">
-          <FullNav
-            ToggleSearch={this.ToggleSearch}
-            CloseSearch={this.CloseSearch}
-            SearchStatus={this.state.SearchOpen}
-          />
-          <MobileNav
-            ToggleDrawer={this.ToggleDrawer}
-            ToggleSearch={this.ToggleSearch}
-            CloseSearch={this.CloseSearch}
-            SearchStatus={this.state.SearchOpen}
-          />
+          <FullNav />
+          <MobileNav toggleDrawer={this.toggleDrawer} />
           <NavDrawer
-            CloseDrawer={this.CloseDrawer}
-            DrawerStatus={this.state.DrawerOpen}
+            closeDrawer={this.closeDrawer}
+            drawerStatus={this.state.isDrawerOpen}
           />
           <div className="AppContentWrap">
             <Switch>
