@@ -1,0 +1,21 @@
+.sign-up {
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  h2 {
+    margin: 2em 0 0.5em;
+  }
+  .title {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sign-up {
+    width: 380px;
+    .buttons {
+      display: block;
+    }
+  }
+}
