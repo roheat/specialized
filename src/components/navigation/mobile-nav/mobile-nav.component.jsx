@@ -1,12 +1,22 @@
 import React from "react";
 import "./mobile-nav.styles.scss";
 import { Link } from "react-router-dom";
+import NavDrawer from "../nav-drawer/nav-drawer.component";
 
 export default class MobileNav extends React.Component {
   constructor() {
     super();
     this.state = { isSearchOpen: false, isDrawerOpen: false };
   }
+
+  toggleDrawer = () => {
+    this.setState(prevState => {
+      return { isDrawerOpen: !prevState.isDrawerOpen };
+    });
+  };
+  closeDrawer = () => {
+    this.setState({ isDrawerOpen: false });
+  };
 
   //Search DropDown
   toggleSearch = () => {
@@ -42,7 +52,7 @@ export default class MobileNav extends React.Component {
             <div className="MobileNav-LeftIcons">
               <div
                 className="MobileNav-LeftIcon MobileNav-MenuIcon"
-                onClick={this.props.toggleDrawer}
+                onClick={this.toggleDrawer}
               ></div>
               <div
                 className="MobileNav-LeftIcon MobileNav-SearchIcon"
@@ -54,7 +64,7 @@ export default class MobileNav extends React.Component {
 
             <div className="MobileNav-RightIcons">
               <Link
-                to="/user-sign-in"
+                to="/sign-in"
                 className="MobileNav-RightIcon MobileNav-UserIcon"
               ></Link>
               <Link
@@ -89,6 +99,10 @@ export default class MobileNav extends React.Component {
             </div>
           </div>
         </div>
+        <NavDrawer
+          closeDrawer={this.closeDrawer}
+          drawerStatus={this.state.isDrawerOpen}
+        />
       </div>
     );
   }

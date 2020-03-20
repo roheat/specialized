@@ -6,7 +6,7 @@ import BikesContent from "../../components/bikes-content/bikes-content.component
 
 import "./bikes.styles.scss";
 
-class Bikes extends React.Component {
+class BikesPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,4 +34,4 @@ class Bikes extends React.Component {
   }
 }
 
-export default Bikes;
+export default BikesPage;

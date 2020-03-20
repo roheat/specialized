@@ -46,7 +46,7 @@ export default class FullNav extends React.Component {
                   <p className="FullNav-EnglishText">EN</p>
                 </div>
 
-                <Link to="/user-sign-in" className="FullNav-SignInButton">
+                <Link to="/sign-in" className="FullNav-SignInButton">
                   SIGN IN
                 </Link>
               </div>
