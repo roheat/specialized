@@ -1,7 +1,10 @@
 import React from "react";
-import "./mobile-nav.styles.scss";
 import { Link } from "react-router-dom";
 import NavDrawer from "../nav-drawer/nav-drawer.component";
+
+import { auth } from "../../../firebase/firebase.utils";
+
+import "./mobile-nav.styles.scss";
 
 export default class MobileNav extends React.Component {
   constructor() {
@@ -39,6 +42,8 @@ export default class MobileNav extends React.Component {
       MobileSearchFieldClasses = "MobileNav-SearchDrawer ActiveMobileSearch";
     }
 
+    const { currentUser } = this.props;
+
     return (
       <div className="MobileNav">
         <div className="MobileNavWrap">
@@ -63,10 +68,17 @@ export default class MobileNav extends React.Component {
             <Link to="/" className="MobileNav-Logo"></Link>
 
             <div className="MobileNav-RightIcons">
-              <Link
-                to="/sign-in"
-                className="MobileNav-RightIcon MobileNav-UserIcon"
-              ></Link>
+              {currentUser ? (
+                <div
+                  className="MobileNav-RightIcon MobileNav-LogoutIcon"
+                  onClick={() => auth.signOut()}
+                ></div>
+              ) : (
+                <Link
+                  to="/sign-in"
+                  className="MobileNav-RightIcon MobileNav-UserIcon"
+                ></Link>
+              )}
               <Link
                 to="/user-cart"
                 className="MobileNav-RightIcon MobileNav-CartIcon"
