@@ -106,7 +106,6 @@
   color: #fff;
   font-size: 10px;
   font-weight: 600;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +113,23 @@
 }
 .FullNav-SignInButton:hover {
   background-color: rgb(57, 57, 57);
+}
+
+.FullNav-SignOutButton {
+  width: 110px;
+  height: 100%;
+  background-color: #eeeeee;
+  color: #000;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.FullNav-SignOutButton:hover {
+  background-color: #4e4e4e;
+  color: #fff;
 }
 
 /* -- Bottom Row ------------- */

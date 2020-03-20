@@ -1,6 +1,9 @@
 import React from "react";
-import "./full-nav.styles.scss";
 import { Link } from "react-router-dom";
+
+import { auth } from "../../../firebase/firebase.utils";
+
+import "./full-nav.styles.scss";
 
 export default class FullNav extends React.Component {
   constructor() {
@@ -23,6 +26,7 @@ export default class FullNav extends React.Component {
   };
   render() {
     let SearchFieldClasses = "FullNav-SearchDrawer";
+    const { currentUser } = this.props;
     if (this.state.isSearchOpen) {
       SearchFieldClasses = "FullNav-SearchDrawer ActiveSearch";
     }
@@ -45,10 +49,18 @@ export default class FullNav extends React.Component {
                   <div className="FullNav-FlagIcon"></div>
                   <p className="FullNav-EnglishText">EN</p>
                 </div>
-
-                <Link to="/sign-in" className="FullNav-SignInButton">
-                  SIGN IN
-                </Link>
+                {currentUser ? (
+                  <div
+                    className="FullNav-SignOutButton"
+                    onClick={() => auth.signOut()}
+                  >
+                    SIGN OUT
+                  </div>
+                ) : (
+                  <Link to="/sign-in" className="FullNav-SignInButton">
+                    SIGN IN
+                  </Link>
+                )}
               </div>
             </div>
           </div>
