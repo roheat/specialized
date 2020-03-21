@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
+import CartIcon from "../../cart-icon/cart-icon.component";
+import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
 import { auth } from "../../../firebase/firebase.utils";
 
 import "./full-nav.styles.scss";
@@ -27,11 +29,11 @@ class FullNav extends React.Component {
   };
   render() {
     let SearchFieldClasses = "FullNav-SearchDrawer";
-    const { currentUser } = this.props;
     if (this.state.isSearchOpen) {
       SearchFieldClasses = "FullNav-SearchDrawer ActiveSearch";
     }
 
+    const { currentUser, hidden } = this.props;
     return (
       <div className="FullNav">
         <div className="FullNavWrap">
@@ -104,10 +106,7 @@ class FullNav extends React.Component {
                   className="FullNav-Search FullNav-Icon"
                   onClick={this.toggleSearch}
                 ></div>
-                <Link
-                  to="/user-cart"
-                  className="FullNav-Cart FullNav-Icon"
-                ></Link>
+                <CartIcon />
               </div>
             </div>
           </div>
@@ -137,13 +136,15 @@ class FullNav extends React.Component {
             </div>
           </div>
         </div>
+        {!hidden && <CartDropdown />}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden
 });
 
 export default connect(mapStateToProps)(FullNav);
