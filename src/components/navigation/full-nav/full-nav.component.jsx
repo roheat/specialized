@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import { auth } from "../../../firebase/firebase.utils";
 
 import "./full-nav.styles.scss";
 
-export default class FullNav extends React.Component {
+class FullNav extends React.Component {
   constructor() {
     super();
     this.state = { isSearchOpen: false };
@@ -140,3 +141,9 @@ export default class FullNav extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(FullNav);

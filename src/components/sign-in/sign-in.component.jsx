@@ -40,6 +40,7 @@ export default class SignIn extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
+            type="email"
             name="email"
             value={email}
             required
@@ -47,6 +48,7 @@ export default class SignIn extends Component {
             label="Email"
           />
           <FormInput
+            type="password"
             name="password"
             value={password}
             required

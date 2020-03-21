@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import NavDrawer from "../nav-drawer/nav-drawer.component";
+import { connect } from "react-redux";
 
+import NavDrawer from "../nav-drawer/nav-drawer.component";
 import { auth } from "../../../firebase/firebase.utils";
 
 import "./mobile-nav.styles.scss";
 
-export default class MobileNav extends React.Component {
+class MobileNav extends React.Component {
   constructor() {
     super();
     this.state = { isSearchOpen: false, isDrawerOpen: false };
@@ -119,3 +120,9 @@ export default class MobileNav extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(MobileNav);
