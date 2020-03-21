@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import NavDrawer from "../nav-drawer/nav-drawer.component";
 import { auth } from "../../../firebase/firebase.utils";
+import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
+import CartIcon from "../../cart-icon/cart-icon.component";
+
+import { selectCurrentUser } from "../../../redux/user/user.selectors";
+import { selectCartHidden } from "../../../redux/cart/cart.selectors";
 
 import "./mobile-nav.styles.scss";
 
@@ -43,7 +49,7 @@ class MobileNav extends React.Component {
       MobileSearchFieldClasses = "MobileNav-SearchDrawer ActiveMobileSearch";
     }
 
-    const { currentUser } = this.props;
+    const { currentUser, hidden } = this.props;
 
     return (
       <div className="MobileNav">
@@ -80,10 +86,7 @@ class MobileNav extends React.Component {
                   className="MobileNav-RightIcon MobileNav-UserIcon"
                 ></Link>
               )}
-              <Link
-                to="/user-cart"
-                className="MobileNav-RightIcon MobileNav-CartIcon"
-              ></Link>
+              <CartIcon />
             </div>
           </div>
 
@@ -116,13 +119,15 @@ class MobileNav extends React.Component {
           closeDrawer={this.closeDrawer}
           drawerStatus={this.state.isDrawerOpen}
         />
+        {!hidden && <CartDropdown />}
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(MobileNav);
