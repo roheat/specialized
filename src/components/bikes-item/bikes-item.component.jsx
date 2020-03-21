@@ -1,16 +1,22 @@
 import React from "react";
-import "./bikes-item.styles.scss";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-export default function BikesItem({ item, routeName }) {
+import { addCartItem } from "../../redux/cart/cart.actions";
+import CustomButton from "../custom-button/custom-button.component";
+
+import "./bikes-item.styles.scss";
+
+function BikesItem({ item, routeName, addCartItem }) {
+  const { prettyId, imageUrl, name, price } = item;
   return (
-    <div className="bikes-item-container" key={item.id}>
+    <div className="bikes-item-container">
       <Link
-        to={`/${routeName}/${item.prettyId}`}
+        to={`/${routeName}/${prettyId}`}
         style={{
           width: "100%",
           height: "60%",
-          background: `url(${item.imageUrl})`,
+          background: `url(${imageUrl})`,
           backgroundPosition: "center",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat"
@@ -18,15 +24,21 @@ export default function BikesItem({ item, routeName }) {
       />
 
       <div className="bikes-item-info">
-        <Link
-          to={`/${routeName}/${item.prettyId}`}
-          className="PreviewCard-Name"
-        >
-          {item.name}
+        <Link to={`/${routeName}/${prettyId}`} className="PreviewCard-Name">
+          {name}
         </Link>
 
-        <p className="bikes-item-price">${item.price}</p>
+        <p className="bikes-item-price">${price}</p>
+        <CustomButton inverted onClick={() => addCartItem(item)}>
+          Add to cart
+        </CustomButton>
       </div>
     </div>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  addCartItem: item => dispatch(addCartItem(item))
+});
+
+export default connect(null, mapDispatchToProps)(BikesItem);

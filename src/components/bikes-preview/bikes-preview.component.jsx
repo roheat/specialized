@@ -11,7 +11,7 @@ export default function BikesPreview({ id, title, routeName, items }) {
 
       <div className="Section-CardWrap">
         {items.map(item => (
-          <BikesItem item={item} routeName={routeName} />
+          <BikesItem key={item.id} item={item} routeName={routeName} />
         ))}
       </div>
     </div>

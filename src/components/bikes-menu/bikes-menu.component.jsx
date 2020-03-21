@@ -93,8 +93,16 @@ export default class BikesMenu extends Component {
                 >
                   StumpJumper Expert 27.5
                 </Link>
-                <Link className="BikesMenu-SecondaryText">Fuse Expert 29</Link>
-                <Link className="BikesMenu-SecondaryText">
+                <Link
+                  to="/shop/trail/fuse-expert-29"
+                  className="BikesMenu-SecondaryText"
+                >
+                  Fuse Expert 29
+                </Link>
+                <Link
+                  to="/shop/trail/fuse-expert-27-5"
+                  className="BikesMenu-SecondaryText"
+                >
                   Fuse Expert 27.5
                 </Link>
               </div>
@@ -159,10 +167,16 @@ export default class BikesMenu extends Component {
                 >
                   S-Works StumpJumper 29
                 </Link>
-                <Link className="BikesMenu-SecondaryText">
+                <Link
+                  to="/shop/s-works/s-works-stumpjumper-27-5"
+                  className="BikesMenu-SecondaryText"
+                >
                   S-Works StumpJumper 27.5
                 </Link>
-                <Link className="BikesMenu-SecondaryText">
+                <Link
+                  className="BikesMenu-SecondaryText"
+                  to="/shop/s-works/s-works-demo-8-frame"
+                >
                   S-Works Demo 8 Frame
                 </Link>
               </div>

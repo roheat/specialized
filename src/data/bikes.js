@@ -54,7 +54,7 @@ const BIKE_DATA = [
     routeName: "shop/downhill",
     items: [
       {
-        id: 1,
+        id: 6,
         name: "Demo Racer 29",
         price: "6,500.00",
         partNumber: "No.94159-0006",
@@ -62,7 +62,7 @@ const BIKE_DATA = [
         prettyId: "demo-racer-29"
       },
       {
-        id: 2,
+        id: 7,
         name: "Demo Expert 29",
         price: "6,300.00",
         partNumber: "No.94159-0007",
@@ -70,7 +70,7 @@ const BIKE_DATA = [
         prettyId: "demo-expert-29"
       },
       {
-        id: 3,
+        id: 8,
         name: "Demo Alloy 27.5",
         price: "3,400.00",
         partNumber: "No.94159-0008",
@@ -85,7 +85,7 @@ const BIKE_DATA = [
     routeName: "shop/s-works",
     items: [
       {
-        id: 1,
+        id: 9,
         name: "S-Works Demo 8",
         price: "10,400.00",
         partNumber: "No.94159-0009",
@@ -93,7 +93,7 @@ const BIKE_DATA = [
         prettyId: "s-works-demo-8"
       },
       {
-        id: 2,
+        id: 10,
         name: "S-Works Epic EVO",
         price: "9,500.00",
         partNumber: "No.94159-0010",
@@ -101,7 +101,7 @@ const BIKE_DATA = [
         prettyId: "s-works-epic-evo"
       },
       {
-        id: 3,
+        id: 11,
         name: "S-Works StumpJumper 29",
         price: "9,520.00",
         partNumber: "No.94159-0011",
@@ -109,7 +109,7 @@ const BIKE_DATA = [
         prettyId: "s-works-stumpjumper-29"
       },
       {
-        id: 4,
+        id: 12,
         name: "S-Works StumpJumper 27.5",
         price: "9,520.00",
         partNumber: "No.94159-0012",
@@ -117,7 +117,7 @@ const BIKE_DATA = [
         prettyId: "s-works-stumpjumper-27-5"
       },
       {
-        id: 5,
+        id: 13,
         name: "S-Works Demo 8 Frame",
         price: "4,000.00",
         partNumber: "No.94159-0013",
