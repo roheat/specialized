@@ -1,33 +1,24 @@
-import React, { Component } from "react";
-import "./bikes-products.styles.scss";
-import BIKE_DATA from "../../data/bikes";
-// import SectionTrail from '../Sections/Trail/Section-Trail';
-// import SectionDownHill from '../Sections/DownHill/Section-DownHill';
-// import SectionSWorks from '../Sections/S-Works/Section-SWorks';
+import React from "react";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
 import BikesPreview from "../bikes-preview/bikes-preview.component";
+import { selectBikesData } from "../../redux/bikes/bikes.selectors";
 
-export default class BikesProducts extends Component {
-  constructor() {
-    super();
+import "./bikes-products.styles.scss";
 
-    this.state = {
-      BikeData: BIKE_DATA
-    };
-  }
-  render() {
-    const { BikeData } = this.state;
+const BikesProducts = ({ bikesData }) => (
+  <div className="BikesProducts">
+    <div className="BikesProductsWrap">
+      {bikesData.map(({ id, ...otherBikesDataProps }) => (
+        <BikesPreview key={id} {...otherBikesDataProps} />
+      ))}
+    </div>
+  </div>
+);
 
-    return (
-      <div className="BikesProducts">
-        <div className="BikesProductsWrap">
-          {/* <SectionTrail />
-                <SectionDownHill />
-                <SectionSWorks /> */}
-          {BikeData.map(({ id, ...otherBikesDataProps }) => (
-            <BikesPreview key={id} {...otherBikesDataProps} />
-          ))}
-        </div>
-      </div>
-    );
-  }
-}
+const mapStateToProps = createStructuredSelector({
+  bikesData: selectBikesData
+});
+
+export default connect(mapStateToProps)(BikesProducts);
