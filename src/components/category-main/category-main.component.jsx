@@ -14,7 +14,19 @@ const CategoryMain = ({ categoryData }) => (
     </div>
 
     <div className="ProductPageBikes-Wrap">
-      <div className="BikesHero">
+      <div
+        style={{
+          background: `url(${categoryData.heroImageUrl})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          width: "100%",
+          height: "55vh",
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center"
+        }}
+      >
         <p className="BikesHero-Title">{categoryData.title}</p>
       </div>
       <div className="BikesContent">

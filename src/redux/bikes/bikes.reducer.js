@@ -4,6 +4,7 @@ const INITIAL_STATE = {
       id: 1,
       title: "Trail",
       routeName: "shop/trail",
+      heroImageUrl: "https://i.ibb.co/KNHBZTs/rsz-101-trailbike-hero.jpg",
       items: {
         "stumpjumper-pro-29": {
           id: 1,
@@ -53,6 +54,7 @@ const INITIAL_STATE = {
       id: 2,
       title: "DownHill",
       routeName: "shop/downhill",
+      heroImageUrl: "https://i.ibb.co/X2Zm3K2/Levo-Turbo-Hero.jpg",
       items: {
         "demo-racer-29": {
           id: 6,
@@ -84,6 +86,7 @@ const INITIAL_STATE = {
       id: 3,
       title: "S-Works",
       routeName: "shop/s-works",
+      heroImageUrl: "https://i.ibb.co/8zCDc6D/SWorks-Hero.jpg",
       items: {
         "s-works-demo-8": {
           id: 9,
