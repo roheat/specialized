@@ -36,7 +36,7 @@ export default function NavDrawer({ closeDrawer, drawerStatus }) {
           <ul className="NavDrawer-MenuList">
             <li className="NavDrawer-MenuItem">
               <Link
-                to="/shop/bikes"
+                to="/shop"
                 className="NavDrawer-MenuLink"
                 onClick={closeDrawer}
               >

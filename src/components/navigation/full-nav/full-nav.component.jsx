@@ -77,7 +77,7 @@ class FullNav extends React.Component {
               <div className="FullNav-LinkWrapper">
                 <ul className="FullNav-LinkList">
                   <li className="FullNav-LinkItem">
-                    <Link to="/shop/bikes" className="FullNav-Link">
+                    <Link to="/shop" className="FullNav-Link">
                       BIKES
                     </Link>
                   </li>

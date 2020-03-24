@@ -10,7 +10,7 @@ import "./bikes-products.styles.scss";
 const BikesProducts = ({ bikesData }) => (
   <div className="BikesProducts">
     <div className="BikesProductsWrap">
-      {bikesData.map(({ id, ...otherBikesDataProps }) => (
+      {Object.values(bikesData).map(({ id, ...otherBikesDataProps }) => (
         <BikesPreview key={id} {...otherBikesDataProps} />
       ))}
     </div>

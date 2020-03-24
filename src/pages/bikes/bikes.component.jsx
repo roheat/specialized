@@ -1,37 +1,16 @@
 import React from "react";
+import { Route } from "react-router-dom";
 
-// import BIKES_DATA from './bikes.data.js';
-import BikesHero from "../../components/bikes-hero/bikes-hero.component";
-import BikesContent from "../../components/bikes-content/bikes-content.component";
+import BikesMain from "../../components/bikes-main/bikes-main.component";
 
 import "./bikes.styles.scss";
+import CategoryPage from "../category/category.component";
 
-class BikesPage extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collections: []
-    };
-  }
-
-  render() {
-    return (
-      <div className="ProductPageBikes">
-        <div className="ProductPage-Header">
-          <div className="ProductPage-HeaderInner">
-            <p className="ProductPage-HeaderTitle">SHOP/BIKES</p>
-          </div>
-        </div>
-
-        <div className="ProductPageBikes-Wrap">
-          <BikesHero />
-
-          <BikesContent />
-        </div>
-      </div>
-    );
-  }
-}
+const BikesPage = ({ match }) => (
+  <div>
+    <Route exact path={`${match.path}`} component={BikesMain} />
+    <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+  </div>
+);
 
 export default BikesPage;

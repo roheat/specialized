@@ -51,7 +51,7 @@ class App extends React.Component {
           <div className="AppContentWrap">
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route exact path="/shop/bikes" component={BikesPage} />
+              <Route path="/shop" component={BikesPage} />
               <Route exact path="/checkout" component={CheckoutPage} />
               <Route
                 exact

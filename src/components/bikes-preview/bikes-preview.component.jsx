@@ -10,7 +10,7 @@ export default function BikesPreview({ id, title, routeName, items }) {
       </a>
 
       <div className="Section-CardWrap">
-        {items.map(item => (
+        {Object.values(items).map(item => (
           <BikesItem key={item.id} item={item} routeName={routeName} />
         ))}
       </div>
