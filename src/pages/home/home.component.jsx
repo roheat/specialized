@@ -1,7 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import "./home.styles.scss";
 
-export default class HomePage extends Component {
-  render() {
-    return <div>Home page</div>;
-  }
+import HomeHero from "../../components/home-hero/home-hero.component";
+import HomeBigImage from "../../components/home-big-image/home-big-image.component";
+import HomeCategories from "../../components/home-categories/home-categories.component";
+
+export default function HomePage() {
+  return (
+    <div className="Landing">
+      <HomeHero />
+      <HomeCategories />
+      <HomeBigImage />
+    </div>
+  );
 }
