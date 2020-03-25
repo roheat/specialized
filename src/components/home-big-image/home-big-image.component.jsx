@@ -5,8 +5,8 @@ export default function LandingBigImage() {
   return (
     <div className="LandingBigImage">
       <div className="LandingBigImage-TitleWrap">
-        <p className="LandingBigImage-Title">FINN</p>
-        <p className="LandingBigImage-Title2">ILES</p>
+        <p className="LandingBigImage-Title">IT'S YOU,</p>
+        <p className="LandingBigImage-Title2">ONLY FASTER</p>
       </div>
 
       <div className="LandingBigImage-TextWrap">
