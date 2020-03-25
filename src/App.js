@@ -10,6 +10,8 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 
 import FullNav from "./components/navigation/full-nav/full-nav.component";
 import MobileNav from "./components/navigation/mobile-nav/mobile-nav.component";
+import FullFooter from "./components/footer/full-footer/full-footer.component";
+import MobileFooter from "./components/footer/mobile-footer/mobile-footer.component";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
@@ -66,6 +68,8 @@ class App extends React.Component {
               />
             </Switch>
           </div>
+          <FullFooter />
+          <MobileFooter />
         </div>
       </div>
     );
