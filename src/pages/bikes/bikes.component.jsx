@@ -5,11 +5,16 @@ import BikesMain from "../../components/bikes-main/bikes-main.component";
 
 import "./bikes.styles.scss";
 import CategoryPage from "../category/category.component";
+import BikeDetailsPage from "../bike-details/bike-details.component";
 
 const BikesPage = ({ match }) => (
   <div>
     <Route exact path={`${match.path}`} component={BikesMain} />
-    <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+    <Route exact path={`${match.path}/:categoryId`} component={CategoryPage} />
+    <Route
+      path={`${match.path}/:categoryId/:bikeId`}
+      component={BikeDetailsPage}
+    />
   </div>
 );
 

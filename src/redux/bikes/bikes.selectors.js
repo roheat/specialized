@@ -7,5 +7,11 @@ export const selectBikesData = createSelector(
   bikes => bikes.bikesData
 );
 
-export const selectBikesCategoryData = categoryUrl =>
-  createSelector([selectBikesData], bikesData => bikesData[categoryUrl]);
+export const selectBikesCategoryData = categoryId =>
+  createSelector([selectBikesData], bikesData => bikesData[categoryId]);
+
+export const selectBikeDetails = (categoryId, bikeId) =>
+  createSelector(
+    [selectBikesData],
+    bikesData => bikesData[categoryId] && bikesData[categoryId].items[bikeId]
+  );
