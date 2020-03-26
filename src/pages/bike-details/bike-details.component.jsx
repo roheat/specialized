@@ -6,6 +6,7 @@ import BikeDetailsSlider from "../../components/bike-details-slider/bike-details
 import BikeDetailsItem from "../../components/bike-details-item/bike-details-item.component";
 import BikeDetailsSpec from "../../components/bike-details-spec/bike-details-spec.component";
 import "./bike-details.styles.scss";
+import BikeDetailsInfo from "../../components/bike-details-info/bike-details-info.component";
 
 const BikeDetailsPage = ({ bikeDetails }) => (
   <div className="ItemPage-Demo8">
@@ -18,11 +19,8 @@ const BikeDetailsPage = ({ bikeDetails }) => (
     <div className="Demo8Wrap">
       <BikeDetailsSlider bikeDetails={bikeDetails} />
       <BikeDetailsItem bikeDetails={bikeDetails} />
+      <BikeDetailsInfo />
       <BikeDetailsSpec />
-      {/* <CarouselDemo8 />
-                <ItemCardDemo8 />
-                <DescriptionDemo8 />
-                <ItemSpecs /> */}
     </div>
   </div>
 );

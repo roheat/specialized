@@ -7,7 +7,7 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import "./bike-details-item.styles.scss";
 
-function BikeDetailsItem({ bikeDetails }) {
+function BikeDetailsItem({ bikeDetails, addCartItem }) {
   const { name, price, partNumber } = bikeDetails;
   return (
     <div className="ItemCard-Demo8">
