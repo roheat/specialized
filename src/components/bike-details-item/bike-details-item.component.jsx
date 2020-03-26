@@ -1,10 +1,14 @@
 import React from "react";
-import "./bike-details-item.styles.scss";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-export default function BikeDetailsItem({
-  bikeDetails: { id, name, price, partNumber }
-}) {
+import { addCartItem } from "../../redux/cart/cart.actions";
+import CustomButton from "../custom-button/custom-button.component";
+
+import "./bike-details-item.styles.scss";
+
+function BikeDetailsItem({ bikeDetails }) {
+  const { name, price, partNumber } = bikeDetails;
   return (
     <div className="ItemCard-Demo8">
       <div className="ItemCardWrap">
@@ -20,7 +24,9 @@ export default function BikeDetailsItem({
         </div>
         <div className="ItemCard-Column">
           <div className="ItemCard-ButtonWrap">
-            <button className="ItemCard-Button BG-Red">ADD TO CART</button>
+            <CustomButton red onClick={() => addCartItem(bikeDetails)}>
+              Add to cart
+            </CustomButton>
             <Link to="/retailers" className="ItemCard-Button">
               FIND NEAR BY
             </Link>
@@ -35,3 +41,9 @@ export default function BikeDetailsItem({
     </div>
   );
 }
+
+const mapDispatchToProps = dispatch => ({
+  addCartItem: item => dispatch(addCartItem(item))
+});
+
+export default connect(null, mapDispatchToProps)(BikeDetailsItem);
