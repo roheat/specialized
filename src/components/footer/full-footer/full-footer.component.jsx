@@ -3,64 +3,78 @@ import "./full-footer.styles.scss";
 
 export default function FullFooter() {
   return (
-    <div className="FullFooter">
-      <div className="FullFooterWrapper">
-        <div className="FullFooter-Left">
-          <form className="FullFooter-Form">
+    <div className="full-footer">
+      <div className="full-footer-wrapper">
+        <div className="full-footer-left">
+          <form className="full-footer-form">
             <input
-              className="FullFooter-FormInput"
+              className="full-footer-formInput"
               type="email"
               name="email"
               placeholder="Join Our Newsletter"
             ></input>
-            <button type="submit" className="FullFooter-FormSubmit">
+            <button type="submit" className="full-footer-formSubmit">
               JOIN
             </button>
           </form>
-          <p className="FullFooter-Left-Text">
+          <p className="full-footer-left-text">
             By submitting your email address you agree to the{" "}
           </p>
-          <p className="FullFooter-Left-Text FullFooter-Terms">
+          <p className="full-footer-left-text full-footer-terms">
             Terms & Conditions
           </p>
         </div>
-        <div className="FullFooter-Center">
-          <p className="FullFooter-CenterText">Contact Us</p>
-          <p className="FullFooter-CenterText">FAQ's</p>
-          <p className="FullFooter-CenterText">Returns</p>
-          <p className="FullFooter-CenterText">Warranty</p>
-          <p className="FullFooter-CenterText">Test The Best</p>
-          <p className="FullFooter-CenterText">Bicycle Registration</p>
-          <p className="FullFooter-CenterText">Safety Notifications</p>
-          <p className="FullFooter-CenterText">Terms of Use</p>
-          <p className="FullFooter-CenterText">Counterfeit Awareness</p>
-          <p className="FullFooter-CenterText">Careers</p>
+        <div className="full-footer-center">
+          <p className="full-footer-centerText">Contact Us</p>
+          <p className="full-footer-centerText">FAQ's</p>
+          <p className="full-footer-centerText">Returns</p>
+          <p className="full-footer-centerText">Warranty</p>
+          <p className="full-footer-centerText">Test The Best</p>
+          <p className="full-footer-centerText">Bicycle Registration</p>
+          <p className="full-footer-centerText">Safety Notifications</p>
+          <p className="full-footer-centerText">Terms of Use</p>
+          <p className="full-footer-centerText">Counterfeit Awareness</p>
+          <p className="full-footer-centerText">Careers</p>
         </div>
-        <div className="FullFooter-Right">
+        <div className="full-footer-right">
           <a
             href="https://www.specialized.com/de/en/store-finder"
             target="_blank"
             rel="noopener noreferrer"
-            className="FullFooter-Right-RetailerButton"
+            className="full-footer-right-retailerButton"
           >
             FIND A RETAILER
           </a>
-          <div className="FullFooter-SocialTags">
-            <div className="FullFooter-SocialTag FullFooter-SocialTag1"></div>
-            <div className="FullFooter-SocialTag FullFooter-SocialTag2"></div>
-            <div className="FullFooter-SocialTag FullFooter-SocialTag3"></div>
-            <div className="FullFooter-SocialTag FullFooter-SocialTag4"></div>
+          <div className="full-footer-socialTags">
+            <div className="full-footer-socialTag full-footer-socialTag1"></div>
+            <div className="full-footer-socialTag full-footer-socialTag2"></div>
+            <div className="full-footer-socialTag full-footer-socialTag3"></div>
+            <div className="full-footer-socialTag full-footer-socialTag4"></div>
           </div>
         </div>
 
-        <div className="FullFooter-CopyRightsWrap">
-          <div className="FullFooter-CopyRightsTop">
-            <p className="FullFooter-CopyRights-Text">Privacy Policy</p>
-            <p className="FullFooter-CopyRights-Text">
+        <div className="full-footer-copyRightsWrap">
+          <p className="full-footer-made-by">
+            Made with{" "}
+            <span role="img" aria-label="love">
+              ❤️
+            </span>
+            by{" "}
+            <a
+              href="https://github.com/roheat"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              roheat
+            </a>
+          </p>
+          <div className="full-footer-copyRightsTop">
+            <p className="full-footer-copyRights-text">Privacy Policy</p>
+            <p className="full-footer-copyRights-text">
               California Transparency Act
             </p>
           </div>
-          <p className="FullFooter-CopyRights-Bottom">
+          <p className="full-footer-copyRights-bottom">
             © 2019. Specialized Bicycle Components. All Rights Reserved
           </p>
         </div>

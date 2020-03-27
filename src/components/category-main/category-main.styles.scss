@@ -1,4 +1,4 @@
-.ProductPageBikes {
+.category-main-bikes {
   width: 100%;
   height: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.ProductPage-Header {
+.category-main-header {
   width: 100%;
   height: 55px;
   position: absolute;
@@ -18,12 +18,12 @@
   align-items: center;
 }
 
-.ProductPageBikes-Wrap {
+.category-main-bikes-wrap {
   width: 100%;
   margin-top: 55px;
 }
 
-.ProductPage-HeaderInner {
+.category-main-headerInner {
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -32,41 +32,42 @@
   align-items: center;
 }
 
-.ProductPage-HeaderTitle {
+.category-main-headerTitle {
   font-size: 12px;
   padding-left: 30px;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 1920px) {
-  .ProductPage-HeaderInner {
+  .category-main-headerInner {
     max-width: 1700px;
   }
-  .ProductPageBikes-Wrap {
+  .category-main-bikes-wrap {
     max-width: 1700px;
   }
 }
 
 @media screen and (max-width: 1750px) {
-  .ProductPage-HeaderInner {
+  .category-main-headerInner {
     max-width: 1500px;
   }
-  .ProductPageBikes-Wrap {
+  .category-main-bikes-wrap {
     max-width: 1500px;
   }
 }
 
 @media screen and (max-width: 1550px) {
-  .ProductPage-HeaderInner {
+  .category-main-headerInner {
     max-width: 1200px;
   }
-  .ProductPageBikes-Wrap {
+  .category-main-bikes-wrap {
     max-width: 1200px;
   }
 }
-.BikesHero {
+.bikes-hero {
   width: 100%;
   height: 55vh;
-  // background: url("../../assets/images/bikes/BikesHero.jpg");
+  // background: url("../../assets/images/bikes/bikesHero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -75,7 +76,7 @@
   align-items: center;
 }
 
-.BikesHero-Title {
+.bikes-hero-title {
   font-size: 40px;
   font-weight: 700;
   padding-left: 80px;
@@ -83,7 +84,7 @@
   text-transform: uppercase;
 }
 
-.BikesContent {
+.bikes-content {
   width: 100%;
   display: flex;
   padding-top: 40px;
@@ -91,49 +92,49 @@
   position: relative;
 }
 
-.BikesProducts {
+.bikes-products {
   width: calc(98% - 250px);
   padding: 20px;
   padding-top: 0;
 }
 
-.BikesProductsWrap {
+.bikes-products-wrap {
   width: 100%;
   height: 100%;
 }
 
 @media screen and (max-width: 1000px) {
-  .BikesProducts {
+  .bikes-products {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 1250px) {
-  .ProductPage-HeaderInner {
+  .category-main-headerInner {
     max-width: 1000px;
   }
-  .ProductPageBikes-Wrap {
+  .category-main-bikes-Wrap {
     max-width: 1000px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .ProductPage-HeaderTitle {
+  .category-main-headerTitle {
     padding-left: 20px;
   }
-  .ProductPage-Header {
+  .category-main-header {
     height: 40px;
   }
-  .ProductPageBikes-Wrap {
+  .category-main-bikes-Wrap {
     margin-top: 40px;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .BikesHero {
+  .bikesHero {
     align-items: flex-end;
   }
-  .BikesHero-Title {
+  .bikesHero-Title {
     padding-bottom: 50px;
     padding-left: 30px;
   }

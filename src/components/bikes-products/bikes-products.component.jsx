@@ -8,8 +8,8 @@ import { selectBikesData } from "../../redux/bikes/bikes.selectors";
 import "./bikes-products.styles.scss";
 
 const BikesProducts = ({ bikesData }) => (
-  <div className="BikesProducts">
-    <div className="BikesProductsWrap">
+  <div className="bikes-products">
+    <div className="bikes-productsWrap">
       {Object.values(bikesData).map(({ id, ...otherBikesDataProps }) => (
         <BikesPreview key={id} {...otherBikesDataProps} />
       ))}

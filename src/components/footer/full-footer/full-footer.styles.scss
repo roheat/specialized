@@ -1,4 +1,4 @@
-.FullFooter {
+.full-footer {
   width: 100%;
   height: 200px;
   position: absolute;
@@ -11,7 +11,7 @@
   z-index: 900;
 }
 
-.FullFooterWrapper {
+.full-footer-wrapper {
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -23,7 +23,7 @@
 }
 
 //LEFT SIDE
-.FullFooter-Left {
+.full-footer-left {
   width: 245px;
   height: 100%;
   position: absolute;
@@ -32,12 +32,12 @@
   padding-top: 35px;
 }
 
-.FullFooter-Form {
+.full-footer-form {
   display: flex;
   margin-bottom: 20px;
 }
 
-.FullFooter-FormInput {
+.full-footer-formInput {
   border: none;
   width: 180px;
   height: 42px;
@@ -48,7 +48,7 @@
   outline: none;
 }
 
-.FullFooter-FormSubmit {
+.full-footer-formSubmit {
   width: 65px;
   height: 42px;
   background-color: #d32e2e;
@@ -58,30 +58,30 @@
   font-size: 12px;
   cursor: pointer;
 }
-.FullFooter-FormSubmit:hover {
+.full-footer-formSubmit:hover {
   background-color: rgb(179, 39, 39);
 }
 
-.FullFooter-Left-Text {
+.full-footer-left-text {
   font-size: 12px;
   font-weight: 300;
   display: inline-block;
   margin: 5px 0;
 }
 
-.FullFooter-Terms {
+.full-footer-terms {
   font-weight: 800;
   text-decoration: underline;
   cursor: pointer;
   display: inline-block;
 }
 
-.FullFooter-Terms:hover {
+.full-footer-terms:hover {
   color: rgb(201, 201, 201);
 }
 
 //CENTER
-.FullFooter-Center {
+.full-footer-center {
   height: 40%;
   width: 100%;
   display: flex;
@@ -91,19 +91,19 @@
   flex-wrap: wrap;
 }
 
-.FullFooter-CenterText {
+.full-footer-centerText {
   white-space: nowrap;
   margin: 0 10px;
   font-size: 10px;
   font-weight: 500;
   cursor: pointer;
 }
-.FullFooter-CenterText:hover {
+.full-footer-centerText:hover {
   color: #d32e2e;
 }
 
 //RIGHT SIDE
-.FullFooter-Right {
+.full-footer-right {
   width: 230px;
   height: 100%;
   position: absolute;
@@ -112,7 +112,7 @@
   padding-top: 35px;
 }
 
-.FullFooter-Right-RetailerButton {
+.full-footer-right-retailerButton {
   width: 100%;
   height: 42px;
   margin-bottom: 20px;
@@ -125,11 +125,11 @@
   align-items: center;
   cursor: pointer;
 }
-.FullFooter-Right-RetailerButton:hover {
+.full-footer-right-retailerButton:hover {
   background-color: rgb(57, 57, 57);
 }
 
-.FullFooter-SocialTags {
+.full-footer-socialTags {
   width: 75%;
   height: 30px;
   margin: 0 auto;
@@ -138,39 +138,39 @@
   align-items: center;
 }
 
-.FullFooter-SocialTag {
+.full-footer-socialTag {
   width: 20px;
   height: 20px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-.FullFooter-SocialTag:hover {
+.full-footer-socialTag:hover {
   width: 32px;
   height: 32px;
 }
 
-.FullFooter-SocialTag1 {
+.full-footer-socialTag1 {
   background: url("../../../assets/images/icons/TwitterIcon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.FullFooter-SocialTag2 {
+.full-footer-socialTag2 {
   background: url("../../../assets/images/icons/InstagramIcon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.FullFooter-SocialTag3 {
+.full-footer-socialTag3 {
   background: url("../../../assets/images/icons/FacebookIcon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.FullFooter-SocialTag4 {
+.full-footer-socialTag4 {
   width: 22px;
   height: 22px;
   background: url("../../../assets/images/icons/YoutubeIcon.svg");
@@ -180,7 +180,7 @@
 }
 
 //COPYRIGHTS
-.FullFooter-CopyRightsWrap {
+.full-footer-copyRightsWrap {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -190,12 +190,28 @@
   align-items: center;
 }
 
-.FullFooter-CopyRightsTop {
+.full-footer-copyRightsTop {
   display: flex;
   justify-content: space-between;
 }
 
-.FullFooter-CopyRights-Text {
+.full-footer-made-by {
+  font-size: 14px;
+  margin-bottom: 1em;
+  display: flex;
+  span {
+    margin: 0 0.3em;
+  }
+  a {
+    color: white;
+    margin-left: 0.3em;
+  }
+  a:hover {
+    color: #d32e2e;
+  }
+}
+
+.full-footer-copyRights-text {
   font-size: 10px;
   font-weight: 600;
   color: #4e4e4e;
@@ -203,11 +219,11 @@
   margin-bottom: 7px;
   cursor: pointer;
 }
-.FullFooter-CopyRights-Text:hover {
+.full-footer-copyRights-text:hover {
   color: rgb(99, 99, 99);
 }
 
-.FullFooter-CopyRights-Bottom {
+.full-footer-copyRights-bottom {
   font-size: 10px;
   font-weight: 600;
   color: #4e4e4e;
@@ -216,31 +232,31 @@
 }
 
 @media screen and (max-width: 1920px) {
-  .FullFooterWrapper {
+  .full-footer-wrapper {
     max-width: 1700px;
   }
 }
 
 @media screen and (max-width: 1750px) {
-  .FullFooterWrapper {
+  .full-footer-wrapper {
     max-width: 1500px;
   }
 }
 
 @media screen and (max-width: 1550px) {
-  .FullFooterWrapper {
+  .full-footer-wrapper {
     max-width: 1200px;
   }
 }
 
 @media screen and (max-width: 1250px) {
-  .FullFooterWrapper {
+  .full-footer-wrapper {
     max-width: 1000px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .FullFooter {
+  .full-footer {
     display: none;
   }
 }

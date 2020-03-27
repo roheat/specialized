@@ -6,14 +6,16 @@ import BikesPreview from "../bikes-preview/bikes-preview.component";
 import "./category-main.styles.scss";
 
 const CategoryMain = ({ categoryData }) => (
-  <div className="ProductPageBikes">
-    <div className="ProductPage-Header">
-      <div className="ProductPage-HeaderInner">
-        <p className="ProductPage-HeaderTitle">SHOP/BIKES</p>
+  <div className="category-main-bikes">
+    <div className="category-main-header">
+      <div className="category-main-headerInner">
+        <p className="category-main-headerTitle">
+          SHOP / BIKES / {categoryData.title}
+        </p>
       </div>
     </div>
 
-    <div className="ProductPageBikes-Wrap">
+    <div className="category-main-bikes-wrap">
       <div
         style={{
           background: `url(${categoryData.heroImageUrl})`,
@@ -24,12 +26,12 @@ const CategoryMain = ({ categoryData }) => (
           alignItems: "center"
         }}
       >
-        <p className="BikesHero-Title">{categoryData.title}</p>
+        <p className="bikes-hero-title">{categoryData.title}</p>
       </div>
-      <div className="BikesContent">
+      <div className="bikes-content">
         <BikesMenu />
-        <div className="BikesProducts">
-          <div className="BikesProductsWrap">
+        <div className="bikes-products">
+          <div className="bikes-products-wrap">
             <BikesPreview {...categoryData} />
           </div>
         </div>
