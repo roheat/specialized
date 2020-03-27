@@ -1,189 +1,74 @@
 import React, { Component } from "react";
-import "./bikes-menu.styles.scss";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-export default class BikesMenu extends Component {
+import { selectBikesData } from "../../redux/bikes/bikes.selectors";
+
+import "./bikes-menu.styles.scss";
+
+class BikesMenu extends Component {
   constructor() {
     super();
     this.state = {
-      Trail: false,
-      DownHill: false,
-      SWorks: false
+      selectedOption: 0
     };
   }
 
-  handleTrail = () => {
-    this.setState(prevState => {
-      return { Trail: !prevState.Trail };
-    });
-  };
-
-  handleDownHill = () => {
-    this.setState(prevState => {
-      return { DownHill: !prevState.DownHill };
-    });
-  };
-
-  handleSWorks = () => {
-    this.setState(prevState => {
-      return { SWorks: !prevState.SWorks };
-    });
+  handleSelect = id => {
+    if (this.state.selectedOption === id) this.setState({ selectedOption: 0 });
+    else this.setState({ selectedOption: id });
   };
 
   render() {
-    let TrailClasses = "BikesMenu-SecondLevel";
-    let TrailAddIconClasses = "BikesMenu-AddIcon ActiveLevel";
-    let TrailSubIconClasses = "BikesMenu-SubIcon";
-    if (this.state.Trail) {
-      TrailClasses = "BikesMenu-SecondLevel ActiveLevel";
-      TrailAddIconClasses = "BikesMenu-AddIcon";
-      TrailSubIconClasses = "BikesMenu-SubIcon ActiveLevel";
-    }
+    const { bikesData } = this.props;
+    const { selectedOption } = this.state;
 
-    let DownHillClasses = "BikesMenu-SecondLevel";
-    let DownHillAddIconClasses = "BikesMenu-AddIcon ActiveLevel";
-    let DownHillSubIconClasses = "BikesMenu-SubIcon";
-    if (this.state.DownHill) {
-      DownHillClasses = "BikesMenu-SecondLevel ActiveLevel";
-      DownHillAddIconClasses = "BikesMenu-AddIcon";
-      DownHillSubIconClasses = "BikesMenu-SubIcon ActiveLevel";
-    }
-
-    let SWorksClasses = "BikesMenu-SecondLevel";
-    let SWorksAddIconClasses = "BikesMenu-AddIcon ActiveLevel";
-    let SWorksSubIconClasses = "BikesMenu-SubIcon";
-    if (this.state.SWorks) {
-      SWorksClasses = "BikesMenu-SecondLevel ActiveLevel";
-      SWorksAddIconClasses = "BikesMenu-AddIcon";
-      SWorksSubIconClasses = "BikesMenu-SubIcon ActiveLevel";
-    }
+    let optionClasses = "bikes-menu-secondLevel";
+    let optionAddIconClasses = "bikes-menu-addIcon active-level";
+    let optionSubIconClasses = "bikes-menu-subIcon";
 
     return (
-      <div className="BikesMenu">
-        <div className="BikesMenu-Wrap">
-          <p className="BikesMenu-Title">SHORT CUTS</p>
+      <div className="bikes-menu">
+        <div className="bikes-menu-wrap">
+          <p className="bikes-menu-title">SHORT CUTS</p>
 
-          <div className="BikesMenu-Group">
-            <p className="BikesMenu-SubTitle">CATEGORY</p>
-            <div className="BikesMenu-ItemWrap">
-              <div
-                className="BikesMenu-PrimaryTextBox"
-                onClick={this.handleTrail}
-              >
-                <p className={TrailAddIconClasses}>+</p>
-                <p className={TrailSubIconClasses}>-</p>
-                <p className="BikesMenu-Text">Trail</p>
+          <div className="bikes-menu-group">
+            <p className="bikes-menu-subTitle">CATEGORY</p>
+            {Object.values(bikesData).map(category => (
+              <div className="bikes-menu-itemWrap">
+                <div
+                  className="bikes-menu-primaryTextBox"
+                  onClick={() => this.handleSelect(category.id)}
+                >
+                  {selectedOption === category.id ? (
+                    <p className={`${optionSubIconClasses} active-level`}>-</p>
+                  ) : (
+                    <p className={optionAddIconClasses}>+</p>
+                  )}
+                  <p className="bikes-menu-text">{category.title}</p>
+                </div>
+                <div
+                  className={
+                    selectedOption === category.id
+                      ? `${optionClasses} active-level`
+                      : optionClasses
+                  }
+                >
+                  {Object.values(category.items).map(item => (
+                    <Link
+                      to={`/${category.routeName}/${item.prettyId}`}
+                      className="bikes-menu-secondaryText"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-              <div className={TrailClasses}>
-                <Link
-                  to="/shop/trail/stumpjumper-pro-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  StumpJumper Pro 29
-                </Link>
-                <Link
-                  to="/shop/trail/stumpjumper-expert-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  StumpJumper Expert 29
-                </Link>
-                <Link
-                  to="/shop/trail/stumpjumper-expert-27-5"
-                  className="BikesMenu-SecondaryText"
-                >
-                  StumpJumper Expert 27.5
-                </Link>
-                <Link
-                  to="/shop/trail/fuse-expert-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  Fuse Expert 29
-                </Link>
-                <Link
-                  to="/shop/trail/fuse-expert-27-5"
-                  className="BikesMenu-SecondaryText"
-                >
-                  Fuse Expert 27.5
-                </Link>
-              </div>
-            </div>
-
-            <div className="BikesMenu-ItemWrap">
-              <div
-                className="BikesMenu-PrimaryTextBox"
-                onClick={this.handleDownHill}
-              >
-                <p className={DownHillAddIconClasses}>+</p>
-                <p className={DownHillSubIconClasses}>-</p>
-                <p className="BikesMenu-Text">DownHill</p>
-              </div>
-              <div className={DownHillClasses}>
-                <Link
-                  to="/shop/downhill/demo-racer-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  Demo Racer 29
-                </Link>
-                <Link
-                  to="/shop/downhill/demo-expert-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  Demo Expert 29
-                </Link>
-                <Link
-                  to="/shop/downhill/demo-alloy-27"
-                  className="BikesMenu-SecondaryText"
-                >
-                  Demo Alloy 27.5
-                </Link>
-              </div>
-            </div>
-
-            <div className="BikesMenu-ItemWrap">
-              <div
-                className="BikesMenu-PrimaryTextBox"
-                onClick={this.handleSWorks}
-              >
-                <p className={SWorksAddIconClasses}>+</p>
-                <p className={SWorksSubIconClasses}>-</p>
-                <p className="BikesMenu-Text">S-Works</p>
-              </div>
-              <div className={SWorksClasses}>
-                <Link
-                  to="/shop/s-works/s-works-demo-8"
-                  className="BikesMenu-SecondaryText"
-                >
-                  S-Works Demo 8
-                </Link>
-                <Link
-                  to="/shop/s-works/s-works-epic-evo"
-                  className="BikesMenu-SecondaryText"
-                >
-                  S-Works Epic EVO
-                </Link>
-                <Link
-                  to="/shop/s-works/s-works-stumpjumper-29"
-                  className="BikesMenu-SecondaryText"
-                >
-                  S-Works StumpJumper 29
-                </Link>
-                <Link
-                  to="/shop/s-works/s-works-stumpjumper-27-5"
-                  className="BikesMenu-SecondaryText"
-                >
-                  S-Works StumpJumper 27.5
-                </Link>
-                <Link
-                  className="BikesMenu-SecondaryText"
-                  to="/shop/s-works/s-works-demo-8-frame"
-                >
-                  S-Works Demo 8 Frame
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
 
-          <p className="BikesMenu-Note">
+          <p className="bikes-menu-note">
             Bikes manufactured and sold by Specialized are guaranteed for
             quality and performance. We stand by our bikes and aim to produce
             the highest quality products. Our bikes are made for riders, by
@@ -194,3 +79,9 @@ export default class BikesMenu extends Component {
     );
   }
 }
+
+const mapStateToProps = createStructuredSelector({
+  bikesData: selectBikesData
+});
+
+export default connect(mapStateToProps)(BikesMenu);

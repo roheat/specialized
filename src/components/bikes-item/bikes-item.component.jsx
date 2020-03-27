@@ -24,7 +24,7 @@ function BikesItem({ item, routeName, addCartItem }) {
       />
 
       <div className="bikes-item-info">
-        <Link to={`/${routeName}/${prettyId}`} className="PreviewCard-Name">
+        <Link to={`/${routeName}/${prettyId}`} className="bike-item-name">
           {name}
         </Link>
 

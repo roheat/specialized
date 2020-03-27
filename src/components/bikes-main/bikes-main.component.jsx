@@ -5,20 +5,18 @@ import BikesProducts from "../bikes-products/bikes-products.component";
 import "./bikes-main.styles.scss";
 
 const BikesMain = () => (
-  <div className="ProductPageBikes">
-    <div className="ProductPage-Header">
-      <div className="ProductPage-HeaderInner">
-        <p className="ProductPage-HeaderTitle">SHOP/BIKES</p>
+  <div className="bikes-main">
+    <div className="bikes-main-header">
+      <div className="bikes-main-headerInner">
+        <p className="bikes-main-headerTitle">SHOP/BIKES</p>
       </div>
     </div>
 
-    <div className="ProductPageBikes-Wrap">
-      {/* <BikesHero /> */}
-      <div className="BikesHero">
-        <p className="BikesHero-Title">BIKES</p>
+    <div className="bikes-main-wrap">
+      <div className="bikes-hero">
+        <p className="bikes-hero-title">BIKES</p>
       </div>
-      {/* <BikesContent /> */}
-      <div className="BikesContent">
+      <div className="bikes-content">
         <BikesMenu />
         <BikesProducts />
       </div>
