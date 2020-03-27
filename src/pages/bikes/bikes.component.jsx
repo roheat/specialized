@@ -3,7 +3,6 @@ import { Route } from "react-router-dom";
 
 import BikesMain from "../../components/bikes-main/bikes-main.component";
 
-import "./bikes.styles.scss";
 import CategoryPage from "../category/category.component";
 import BikeDetailsPage from "../bike-details/bike-details.component";
 

@@ -9,7 +9,7 @@ import HomeInstagram from "../../components/home-instagram/home-instagram.compon
 
 export default function HomePage() {
   return (
-    <div className="Landing">
+    <div className="landing">
       <HomeHero />
       <HomeAbout />
       <HomeCategories />
