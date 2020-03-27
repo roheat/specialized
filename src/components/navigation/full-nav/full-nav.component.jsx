@@ -46,10 +46,15 @@ class FullNav extends React.Component {
                 FREE SHIPPING ON ALL ORDERS OVER $150.
               </p>
               <div className="FullNav-TopUserToolsWrap">
-                <Link to="/retailers" className="FullNav-RetailerLink">
+                <a
+                  href="https://www.specialized.com/de/en/store-finder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="FullNav-RetailerLink"
+                >
                   <div className="FullNav-RetailerIcon"></div>
                   <p className="FullNav-RetailerText">FIND A RETAILER</p>
-                </Link>
+                </a>
 
                 <div className="FullNav-EnglishWrap">
                   <div className="FullNav-FlagIcon"></div>

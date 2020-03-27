@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { addCartItem } from "../../redux/cart/cart.actions";
@@ -27,9 +26,14 @@ function BikeDetailsItem({ bikeDetails, addCartItem }) {
             <CustomButton red onClick={() => addCartItem(bikeDetails)}>
               Add to cart
             </CustomButton>
-            <Link to="/retailers" className="ItemCard-Button">
+            <a
+              href="https://www.specialized.com/de/en/store-finder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ItemCard-Button"
+            >
               FIND NEAR BY
-            </Link>
+            </a>
           </div>
 
           <p className="ItemCard-WishList">+ WISHLIST</p>

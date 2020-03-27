@@ -1,6 +1,5 @@
 import React from "react";
 import "./mobile-footer.styles.scss";
-import { Link } from "react-router-dom";
 
 export default function MobileFooter() {
   const HandleSubmit = event => {
@@ -31,9 +30,14 @@ export default function MobileFooter() {
         </div>
 
         <div className="MobileFooter-Middle">
-          <Link to="/retailers" className="MobileFooter-Right-RetailerButton">
+          <a
+            href="https://www.specialized.com/de/en/store-finder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="MobileFooter-Right-RetailerButton"
+          >
             FIND A RETAILER
-          </Link>
+          </a>
           <div className="MobileFooter-SocialTags">
             <div className="FullFooter-SocialTag FullFooter-SocialTag1"></div>
             <div className="FullFooter-SocialTag FullFooter-SocialTag2"></div>

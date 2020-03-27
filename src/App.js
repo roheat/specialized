@@ -7,6 +7,7 @@ import HomePage from "./pages/home/home.component";
 import BikesPage from "./pages/bikes/bikes.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
+import InsideSpecialized from "./pages/inside-specialized/inside-specialized.component";
 
 import FullNav from "./components/navigation/full-nav/full-nav.component";
 import MobileNav from "./components/navigation/mobile-nav/mobile-nav.component";
@@ -55,6 +56,11 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage} />
               <Route path="/shop" component={BikesPage} />
               <Route exact path="/checkout" component={CheckoutPage} />
+              <Route
+                exact
+                path="/inside-specialized"
+                component={InsideSpecialized}
+              />
               <Route
                 exact
                 path="/sign-in"

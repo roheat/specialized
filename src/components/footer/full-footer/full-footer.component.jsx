@@ -1,6 +1,5 @@
 import React from "react";
 import "./full-footer.styles.scss";
-import { Link } from "react-router-dom";
 
 export default function FullFooter() {
   return (
@@ -38,9 +37,14 @@ export default function FullFooter() {
           <p className="FullFooter-CenterText">Careers</p>
         </div>
         <div className="FullFooter-Right">
-          <Link to="/retailers" className="FullFooter-Right-RetailerButton">
+          <a
+            href="https://www.specialized.com/de/en/store-finder"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="FullFooter-Right-RetailerButton"
+          >
             FIND A RETAILER
-          </Link>
+          </a>
           <div className="FullFooter-SocialTags">
             <div className="FullFooter-SocialTag FullFooter-SocialTag1"></div>
             <div className="FullFooter-SocialTag FullFooter-SocialTag2"></div>

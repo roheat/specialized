@@ -1,0 +1,302 @@
+.InsideSpecialized {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #141414;
+}
+
+.InsideWrap {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//SECTION 5
+.Inside-Section5 {
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  background-color: #292929;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  text-align: center;
+  line-height: 28px;
+}
+
+//SECTION 6
+.Inside-Section6 {
+  width: 100%;
+  height: 80vh;
+  margin: 40px 0;
+}
+
+.Inside-Family {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/about/AboutHero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 7%;
+}
+
+.Inside-FamilyContent {
+  width: 35%;
+  color: #fff;
+  text-align: right;
+}
+
+.Inside-Family-Title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.Inside-Family-Text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.Inside-Grey1 {
+  width: 100%;
+  height: 250px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.Inside-Video {
+  width: 100%;
+  height: 80vh;
+}
+
+.Inside-Career {
+  width: 100%;
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Inside-Career-Content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Inside-Career-Title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.Inside-Career-Text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.Inside-Career-Button {
+  padding: 15px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #141414;
+  color: #fff;
+  align-self: center;
+  cursor: pointer;
+}
+.Inside-Career-Button:hover {
+  background-color: #685e5e;
+}
+
+.Inside-Poster2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/about/AboutSection3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 850px) {
+  .Inside-Poster2 {
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Inside-Poster2 {
+    height: 65vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Inside-Poster2 {
+    height: 55vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Inside-Career-Content {
+    width: 100%;
+  }
+  .Inside-Career-Button {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Inside-Video {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Inside-Video {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Inside-Grey1 {
+    font-size: 16px;
+    height: 200px;
+  }
+}
+
+.Inside-Grey2 {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.Inside-Grey2-Text {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+  // color: #FFF;
+}
+
+@media screen and (max-width: 700px) {
+  .Inside-Grey2 {
+    height: 200px;
+  }
+  .Inside-Grey2-Text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Inside-FamilyContent {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Inside-Family {
+    height: 70vh;
+  }
+  .Inside-FamilyContent {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Inside-Family {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 700px) {
+  .Inside-Section1 {
+    height: 80vh;
+  }
+  .Inside-Section1-Mobile {
+    display: flex;
+  }
+  .Inside-Section1-Title {
+    display: none;
+  }
+  .Inside-Section1-Text {
+    display: none;
+  }
+  .Inside-Section2 {
+    height: 70vh;
+  }
+  .Inside-Section3 {
+    font-size: 3vw;
+  }
+  .Inside-Section4 {
+    height: 70vh;
+  }
+  .Inside-Section5 {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Inside-Section2 {
+    height: 40vh;
+  }
+  .Inside-Section3 {
+    font-size: 4vw;
+  }
+  .Inside-Section5 {
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .InsideWrap {
+    max-width: 1700px;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .InsideWrap {
+    max-width: 1500px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .InsideWrap {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .InsideWrap {
+    max-width: 1000px;
+  }
+}

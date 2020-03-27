@@ -71,13 +71,15 @@ export default function NavDrawer({ closeDrawer, drawerStatus }) {
               </Link>
             </li>
             <li className="NavDrawer-MenuItem">
-              <Link
-                to="/retailers"
+              <a
+                href="https://www.specialized.com/de/en/store-finder"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="NavDrawer-MenuLink"
                 onClick={closeDrawer}
               >
                 FIND A RETAILER
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
