@@ -1,4 +1,4 @@
-.FullNav {
+.full-nav {
   width: 100%;
   height: 90px;
   position: fixed;
@@ -7,49 +7,46 @@
   z-index: 950;
 }
 
-.FullNavWrap {
+.full-navWrap {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.FullNav-RowWrap {
+.full-nav-rowWrap {
   width: 100%;
   height: 100%;
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
 }
-.FullNav-RowWrap-Top {
+.full-nav-rowWrap-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.FullNav-RowWrap-Bottom {
-}
-
 /* -- Top Row ------------- */
-.FullNav-TopRow {
+.full-nav-topRow {
   width: 100%;
   height: 35px;
   background-color: #141414;
   z-index: 10;
 }
-.FullNav-ShippingOffer {
+.full-nav-shippingOffer {
   font-size: 10px;
   font-weight: 600;
   color: #fff;
   margin-left: 20px;
 }
 
-.FullNav-TopUserToolsWrap {
+.full-nav-topUserToolsWrap {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.FullNav-RetailerLink {
+.full-nav-retailerLink {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +56,7 @@
   margin-right: 20px;
   cursor: pointer;
 }
-.FullNav-RetailerIcon {
+.full-nav-retailerIcon {
   width: 15px;
   height: 15px;
   background: url("../../../assets/images/icons/LocationIcon.svg");
@@ -68,13 +65,13 @@
   background-repeat: no-repeat;
 }
 
-.FullNav-RetailerText {
+.full-nav-retailerText {
   font-size: 10px;
   font-weight: 600;
   color: #fff;
 }
 
-.FullNav-EnglishWrap {
+.full-nav-englishWrap {
   width: 70px;
   height: 100%;
   display: flex;
@@ -84,7 +81,7 @@
   margin-right: 20px;
   cursor: pointer;
 }
-.FullNav-FlagIcon {
+.full-nav-flagIcon {
   width: 30px;
   height: 15px;
   background: url("../../../assets/images/icons/AmericanFlagIcon.svg");
@@ -93,13 +90,13 @@
   background-repeat: no-repeat;
 }
 
-.FullNav-EnglishText {
+.full-nav-englishText {
   font-size: 10px;
   font-weight: 600;
   color: #fff;
 }
 
-.FullNav-SignInButton {
+.full-nav-signInButton {
   width: 110px;
   height: 100%;
   background-color: #4e4e4e;
@@ -111,11 +108,11 @@
   align-items: center;
   cursor: pointer;
 }
-.FullNav-SignInButton:hover {
+.full-nav-signInButton:hover {
   background-color: rgb(57, 57, 57);
 }
 
-.FullNav-SignOutButton {
+.full-nav-signOutButton {
   width: 110px;
   height: 100%;
   background-color: #eeeeee;
@@ -127,13 +124,13 @@
   align-items: center;
   cursor: pointer;
 }
-.FullNav-SignOutButton:hover {
+.full-nav-signOutButton:hover {
   background-color: #4e4e4e;
   color: #fff;
 }
 
 /* -- Bottom Row ------------- */
-.FullNav-BottomRow {
+.full-nav-bottomRow {
   width: 100%;
   height: 55px;
   background-color: #fff;
@@ -141,7 +138,7 @@
   z-index: 10;
 }
 
-.FullNav-Logo {
+.full-nav-logo {
   width: 150px;
   height: 100%;
   display: flex;
@@ -157,33 +154,33 @@
   cursor: pointer;
 }
 
-.FullNav-LinkWrapper {
+.full-nav-linkWrapper {
   text-align: center;
   height: 100%;
 }
 
-.FullNav-LinkList {
+.full-nav-linkList {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.FullNav-LinkItem {
+.full-nav-linkItem {
   padding: 0 40px;
 }
 
-.FullNav-Link {
+.full-nav-link {
   font-size: 11px;
   color: #141414;
   font-weight: 600;
   white-space: nowrap;
 }
-.FullNav-Link:hover {
+.full-nav-link:hover {
   color: #d32e2e;
 }
 
-.FullNav-BottomUserToolsWrap {
+.full-nav-bottomUserToolsWrap {
   height: 100%;
   width: 100px;
   display: flex;
@@ -194,20 +191,20 @@
   top: 0;
 }
 
-.FullNav-Icon {
+.full-nav-icon {
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
 
-.FullNav-Search {
+.full-nav-search {
   background: url("../../../assets/images/icons/SearchIcon.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
-.FullNav-Cart {
+.full-nav-cart {
   background: url("../../../assets/images/icons/ShoppingCartIcon.svg");
   background-position: center;
   background-size: contain;
@@ -215,7 +212,7 @@
 }
 
 //SearchField
-.FullNav-SearchDrawer {
+.full-nav-searchDrawer {
   width: 100%;
   height: 55px;
   position: absolute;
@@ -232,12 +229,12 @@
   bottom: -55px;
 }
 
-.FullNav-SearchDrawerWrap {
+.full-nav-searchDrawerWrap {
   width: 75%;
   height: 80%;
 }
 
-.FullNav-SearchForm {
+.full-nav-searchForm {
   width: 100%;
   height: 100%;
   display: flex;
@@ -245,7 +242,7 @@
   align-items: center;
 }
 
-.FullNav-SearchField {
+.full-nav-searchField {
   width: 88%;
   height: 100%;
   display: flex;
@@ -253,7 +250,7 @@
   justify-content: center;
 }
 
-.FullNav-SearchFieldInput {
+.full-nav-searchFieldInput {
   width: 100%;
   height: 100%;
   border: none;
@@ -265,7 +262,7 @@
   padding: 0 10px;
 }
 
-.FullNav-SearchButton {
+.full-nav-searchButton {
   width: 10%;
   height: 100%;
   border: 1px solid #141414;
@@ -273,40 +270,40 @@
   font-size: 14px;
   font-weight: 200;
 }
-.FullNav-SearchButton:hover {
+.full-nav-searchButton:hover {
   background-color: rgb(249, 249, 249);
   cursor: pointer;
 }
 
 @media screen and (max-width: 1920px) {
-  .FullNav-RowWrap {
+  .full-nav-rowWrap {
     max-width: 1700px;
   }
 }
 
 @media screen and (max-width: 1750px) {
-  .FullNav-RowWrap {
+  .full-nav-rowWrap {
     max-width: 1500px;
   }
 }
 
 @media screen and (max-width: 1550px) {
-  .FullNav-RowWrap {
+  .full-nav-rowWrap {
     max-width: 1200px;
   }
 }
 
 @media screen and (max-width: 1250px) {
-  .FullNav-RowWrap {
+  .full-nav-rowWrap {
     max-width: 1000px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .FullNav {
+  .full-nav {
     display: none;
   }
-  .FullNav-RowWrap {
+  .full-nav-rowWrap {
     margin-top: 60px;
   }
 }

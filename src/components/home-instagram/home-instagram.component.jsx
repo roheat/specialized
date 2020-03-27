@@ -3,32 +3,32 @@ import "./home-instagram.styles.scss";
 
 export default function HomeInstagram() {
   return (
-    <div className="LandingIG">
-      <p className="LandingIG-Title">FOLLOW US ON INSTAGRAM</p>
+    <div className="home-instagram">
+      <p className="home-instagram-title">FOLLOW US ON INSTAGRAM</p>
 
-      <div className="LandingIG-IGInfoWrap">
-        <div className="LandingIG-InfoImage"></div>
+      <div className="home-instagram-infoWrap">
+        <div className="home-instagram-infoImage"></div>
         <a
           href="https://www.instagram.com/iamspecialized_mtb/"
           target="_blank"
-          className="LandingIG-IGInfo"
+          className="home-instagram-info"
           rel="noopener noreferrer"
         >
           iamspecialized_mtb
         </a>
-        <span className="Verified"></span>
+        <span className="verified"></span>
       </div>
 
-      <div className="LandingIG-ImagesWrap">
-        <div className="LandingIG-ImagesRow">
-          <div className="LandingIG-Image LandingIG-Image1"></div>
-          <div className="LandingIG-Image LandingIG-Image2"></div>
-          <div className="LandingIG-Image LandingIG-Image3"></div>
+      <div className="home-instagram-imagesWrap">
+        <div className="home-instagram-imagesRow">
+          <div className="home-instagram-image home-instagram-image1"></div>
+          <div className="home-instagram-image home-instagram-image2"></div>
+          <div className="home-instagram-image home-instagram-image3"></div>
         </div>
-        <div className="LandingIG-ImagesRow">
-          <div className="LandingIG-Image LandingIG-Image4"></div>
-          <div className="LandingIG-Image LandingIG-Image5"></div>
-          <div className="LandingIG-Image LandingIG-Image6"></div>
+        <div className="home-instagram-imagesRow">
+          <div className="home-instagram-image home-instagram-image4"></div>
+          <div className="home-instagram-image home-instagram-image5"></div>
+          <div className="home-instagram-image home-instagram-image6"></div>
         </div>
       </div>
     </div>

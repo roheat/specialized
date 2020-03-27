@@ -44,46 +44,46 @@ class MobileNav extends React.Component {
   };
 
   render() {
-    let MobileSearchFieldClasses = "MobileNav-SearchDrawer";
+    let MobileSearchFieldClasses = "mobile-nav-searchDrawer";
     if (this.state.isSearchOpen) {
-      MobileSearchFieldClasses = "MobileNav-SearchDrawer ActiveMobileSearch";
+      MobileSearchFieldClasses = "mobile-nav-searchDrawer active-mobile-search";
     }
 
     const { currentUser, hidden } = this.props;
 
     return (
-      <div className="MobileNav">
-        <div className="MobileNavWrap">
-          <div className="MobileNav-TopRow">
-            <p className="MobileNav-ShippingOffer">
+      <div className="mobile-nav">
+        <div className="mobile-navWrap">
+          <div className="mobile-nav-topRow">
+            <p className="mobile-nav-shippingOffer">
               FREE SHIPPING ON ALL ORDERS OVER $150.
             </p>
           </div>
 
-          <div className="MobileNav-BottomRow">
-            <div className="MobileNav-LeftIcons">
+          <div className="mobile-nav-bottomRow">
+            <div className="mobile-nav-leftIcons">
               <div
-                className="MobileNav-LeftIcon MobileNav-MenuIcon"
+                className="mobile-nav-leftIcon mobile-nav-menuIcon"
                 onClick={this.toggleDrawer}
               ></div>
               <div
-                className="MobileNav-LeftIcon MobileNav-SearchIcon"
+                className="mobile-nav-leftIcon mobile-nav-searchIcon"
                 onClick={this.toggleSearch}
               ></div>
             </div>
 
-            <Link to="/" className="MobileNav-Logo"></Link>
+            <Link to="/" className="mobile-nav-logo"></Link>
 
-            <div className="MobileNav-RightIcons">
+            <div className="mobile-nav-rightIcons">
               {currentUser ? (
                 <div
-                  className="MobileNav-RightIcon MobileNav-LogoutIcon"
+                  className="mobile-nav-rightIcon mobile-nav-logoutIcon"
                   onClick={() => auth.signOut()}
                 ></div>
               ) : (
                 <Link
                   to="/sign-in"
-                  className="MobileNav-RightIcon MobileNav-UserIcon"
+                  className="mobile-nav-rightIcon mobile-nav-userIcon"
                 ></Link>
               )}
               <CartIcon />
@@ -91,22 +91,22 @@ class MobileNav extends React.Component {
           </div>
 
           <div className={MobileSearchFieldClasses}>
-            <div className="MobileNav-SearchDrawerWrap">
+            <div className="mobile-nav-searchDrawerWrap">
               <form
                 onSubmit={this.handleSubmit}
                 action="/"
-                className="MobileNav-SearchForm"
+                className="mobile-nav-searchForm"
               >
-                <div className="MobileNav-SearchField">
+                <div className="mobile-nav-searchField">
                   <input
                     type="search"
                     name="Nav Search"
-                    className="MobileNav-SearchFieldInput"
+                    className="mobile-nav-searchFieldInput"
                   ></input>
                 </div>
                 <button
                   type="submit"
-                  className="MobileNav-SearchButton"
+                  className="mobile-nav-searchButton"
                   onClick={this.closeSearch}
                 >
                   SEARCH

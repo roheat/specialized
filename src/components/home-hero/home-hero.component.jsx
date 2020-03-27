@@ -4,25 +4,25 @@ import { Link } from "react-router-dom";
 
 export default function LandingHero() {
   return (
-    <div className="Landing-Hero">
-      <div className="Landing-Hero-Content">
-        <div className="Landing-Hero-TitleWrap">
-          <p className="Landing-Hero-Title">WE HAVE</p>
-          <p className="Landing-Hero-Title">THE WORKS</p>
+    <div className="home-hero">
+      <div className="home-hero-content">
+        <div className="home-hero-titleWrap">
+          <p className="home-hero-title">WE HAVE</p>
+          <p className="home-hero-title">THE WORKS</p>
         </div>
 
-        <p className="Landing-Hero-Text">
+        <p className="home-hero-text">
           ITS ALL FUN AND GAMES UNTIL YOU CATCH TOO MUCH AIR
         </p>
 
-        <Link to="/shop/s-works/s-works-demo-8" className="Landing-Hero-Button">
-          DEMO 8 FSR
+        <Link to="/shop/trail/fuse-expert-29" className="home-hero-button">
+          Fuse Expert 29
         </Link>
       </div>
 
-      <Link to="/shop/s-works" className="Landing-Hero-BottomHookWrap">
-        <p className="Landing-Hero-BottomHook">TAKE A DEEPER LOOK AT THE</p>
-        <p className="Landing-Hero-BottomHook Bolder">2019 S-WORKS LINE UP</p>
+      <Link to="/shop/s-works" className="home-hero-bottomHookWrap">
+        <p className="home-hero-bottomHook">TAKE A DEEPER LOOK AT THE</p>
+        <p className="home-hero-bottomHook bolder">2019 S-WORKS LINE UP</p>
       </Link>
     </div>
   );

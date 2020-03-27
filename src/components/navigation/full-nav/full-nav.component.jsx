@@ -16,11 +16,9 @@ class FullNav extends React.Component {
     super();
     this.state = { isSearchOpen: false };
   }
-  //Search DropDown
+
   toggleSearch = () => {
-    this.setState(prevState => {
-      return { isSearchOpen: !prevState.isSearchOpen };
-    });
+    this.setState({ isSearchOpen: !this.state.isSearchOpen });
   };
 
   closeSearch = () => {
@@ -31,87 +29,87 @@ class FullNav extends React.Component {
     e.preventDefault();
   };
   render() {
-    let SearchFieldClasses = "FullNav-SearchDrawer";
+    let SearchFieldClasses = "full-nav-searchDrawer";
     if (this.state.isSearchOpen) {
-      SearchFieldClasses = "FullNav-SearchDrawer ActiveSearch";
+      SearchFieldClasses = "full-nav-searchDrawer ActiveSearch";
     }
 
     const { currentUser, hidden } = this.props;
     return (
-      <div className="FullNav">
-        <div className="FullNavWrap">
-          <div className="FullNav-TopRow">
-            <div className="FullNav-RowWrap FullNav-RowWrap-Top">
-              <p className="FullNav-ShippingOffer">
+      <div className="full-nav">
+        <div className="full-navWrap">
+          <div className="full-nav-topRow">
+            <div className="full-nav-rowWrap full-nav-rowWrap-top">
+              <p className="full-nav-shippingOffer">
                 FREE SHIPPING ON ALL ORDERS OVER $150.
               </p>
-              <div className="FullNav-TopUserToolsWrap">
+              <div className="full-nav-topUserToolsWrap">
                 <a
                   href="https://www.specialized.com/de/en/store-finder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="FullNav-RetailerLink"
+                  className="full-nav-retailerLink"
                 >
-                  <div className="FullNav-RetailerIcon"></div>
-                  <p className="FullNav-RetailerText">FIND A RETAILER</p>
+                  <div className="full-nav-retailerIcon"></div>
+                  <p className="full-nav-retailerText">FIND A RETAILER</p>
                 </a>
 
-                <div className="FullNav-EnglishWrap">
-                  <div className="FullNav-FlagIcon"></div>
-                  <p className="FullNav-EnglishText">EN</p>
+                <div className="full-nav-englishWrap">
+                  <div className="full-nav-flagIcon"></div>
+                  <p className="full-nav-englishText">EN</p>
                 </div>
                 {currentUser ? (
                   <div
-                    className="FullNav-SignOutButton"
+                    className="full-nav-signOutButton"
                     onClick={() => auth.signOut()}
                   >
                     SIGN OUT
                   </div>
                 ) : (
-                  <Link to="/sign-in" className="FullNav-SignInButton">
+                  <Link to="/sign-in" className="full-nav-signInButton">
                     SIGN IN
                   </Link>
                 )}
               </div>
             </div>
           </div>
-          <div className="FullNav-BottomRow">
-            <div className="FullNav-RowWrap FullNav-RowWrap-Bottom">
-              <Link to="/" className="FullNav-Logo"></Link>
+          <div className="full-nav-bottomRow">
+            <div className="full-nav-rowWrap full-nav-rowWrap-bottom">
+              <Link to="/" className="full-nav-logo"></Link>
 
-              <div className="FullNav-LinkWrapper">
-                <ul className="FullNav-LinkList">
-                  <li className="FullNav-LinkItem">
-                    <Link to="/shop" className="FullNav-Link">
+              <div className="full-nav-linkWrapper">
+                <ul className="full-nav-linkList">
+                  <li className="full-nav-linkItem">
+                    <Link to="/shop" className="full-nav-link">
                       BIKES
                     </Link>
                   </li>
-                  <li className="FullNav-LinkItem">
-                    <Link to="/shop/trail" className="FullNav-Link">
+                  <li className="full-nav-linkItem">
+                    <Link to="/shop/trail" className="full-nav-link">
                       TRAIL
                     </Link>
                   </li>
-                  <li className="FullNav-LinkItem">
-                    <Link to="/shop/downhill" className="FullNav-Link">
+                  <li className="full-nav-linkItem">
+                    <Link to="/shop/downhill" className="full-nav-link">
                       DOWNHILL
                     </Link>
                   </li>
-                  <li className="FullNav-LinkItem">
-                    <Link to="/shop/s-works" className="FullNav-Link">
+                  <li className="full-nav-linkItem">
+                    <Link to="/shop/s-works" className="full-nav-link">
                       S-WORKS
                     </Link>
                   </li>
-                  <li className="FullNav-LinkItem">
-                    <Link to="/inside-specialized" className="FullNav-Link">
+                  <li className="full-nav-linkItem">
+                    <Link to="/inside-specialized" className="full-nav-link">
                       INSIDE SPECIALIZED
                     </Link>
                   </li>
                 </ul>
               </div>
 
-              <div className="FullNav-BottomUserToolsWrap">
+              <div className="full-nav-bottomUserToolsWrap">
                 <div
-                  className="FullNav-Search FullNav-Icon"
+                  className="full-nav-search full-nav-icon"
                   onClick={this.toggleSearch}
                 ></div>
                 <CartIcon />
@@ -120,22 +118,22 @@ class FullNav extends React.Component {
           </div>
 
           <div className={SearchFieldClasses}>
-            <div className="FullNav-SearchDrawerWrap">
+            <div className="full-nav-searchDrawerWrap">
               <form
                 onSubmit={this.handleSubmit}
                 action="/"
-                className="FullNav-SearchForm"
+                className="full-nav-searchForm"
               >
-                <div className="FullNav-SearchField">
+                <div className="full-nav-searchField">
                   <input
                     type="search"
                     name="Nav Search"
-                    className="FullNav-SearchFieldInput"
+                    className="full-nav-searchFieldInput"
                   ></input>
                 </div>
                 <button
                   type="submit"
-                  className="FullNav-SearchButton"
+                  className="full-nav-searchButton"
                   onClick={this.closeSearch}
                 >
                   SEARCH

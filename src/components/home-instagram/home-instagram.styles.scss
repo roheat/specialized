@@ -1,4 +1,4 @@
-.LandingIG {
+.home-instagram {
   width: 100%;
   // background-color: rgb(9, 9, 9);
   // color: #FFF;
@@ -6,7 +6,7 @@
   // border-top: 1px solid rgb(24, 24, 24);
 }
 
-.LandingIG-Title {
+.home-instagram-title {
   padding-left: calc(5% + 15px);
   font-size: 18px;
   font-weight: 600;
@@ -14,14 +14,14 @@
   padding-bottom: 10px;
 }
 
-.LandingIG-IGInfoWrap {
+.home-instagram-infoWrap {
   width: 100%;
   display: flex;
   align-items: center;
   padding: 0 50px;
 }
 
-.LandingIG-InfoImage {
+.home-instagram-infoImage {
   width: 100px;
   height: 100px;
   background: url("../../assets/images/landing/IGLogo.png");
@@ -33,14 +33,14 @@
   margin-left: 3em;
 }
 
-.LandingIG-IGInfo {
+.home-instagram-info {
   font-size: 18px;
   font-weight: 500;
   // color: #FFF;
   margin-right: 10px;
 }
 
-.Verified {
+.verified {
   width: 20px;
   height: 20px;
   background: url("../../assets/images/icons/Verified.svg");
@@ -49,13 +49,13 @@
   background-repeat: no-repeat;
 }
 
-.LandingIG-ImagesWrap {
+.home-instagram-imagesWrap {
   width: 100%;
   padding: 80px;
   padding-top: 40px;
 }
 
-.LandingIG-ImagesRow {
+.home-instagram-imagesRow {
   width: 100%;
   height: 360px;
   display: flex;
@@ -64,44 +64,44 @@
   margin-bottom: 40px;
 }
 
-.LandingIG-Image {
+.home-instagram-image {
   width: 29%;
   height: 100%;
   background-color: #fff;
   // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.LandingIG-Image1 {
+.home-instagram-image1 {
   background: url("../../assets/images/landing/IG1.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.LandingIG-Image2 {
+.home-instagram-image2 {
   background: url("../../assets/images/landing/IG2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.LandingIG-Image3 {
+.home-instagram-image3 {
   background: url("../../assets/images/landing/IG3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.LandingIG-Image4 {
+.home-instagram-image4 {
   background: url("../../assets/images/landing/IG4.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.LandingIG-Image5 {
+.home-instagram-image5 {
   background: url("../../assets/images/landing/IG5.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.LandingIG-Image6 {
+.home-instagram-image6 {
   background: url("../../assets/images/landing/IG6.jpg");
   background-position: center;
   background-size: cover;
@@ -109,35 +109,35 @@
 }
 
 @media screen and (max-width: 800px) {
-  .LandingIG-ImagesWrap {
+  .home-instagram-imagesWrap {
     padding: 50px 40px;
   }
-  .LandingIG-ImagesRow {
+  .home-instagram-imagesRow {
     height: 200px;
   }
-  .LandingIG-Title {
+  .home-instagram-title {
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .LandingIG-Title {
+  .home-instagram-title {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 550px) {
-  .LandingIG-ImagesWrap {
+  .home-instagram-imagesWrap {
     padding: 35px 20px;
     justify-self: center;
   }
-  .LandingIG-ImagesRow {
+  .home-instagram-imagesRow {
     height: 150px;
     margin-bottom: 20px;
   }
-  .LandingIG-IGInfoWrap {
+  .home-instagram-infoWrap {
     padding: 0;
   }
-  .LandingIG-Title {
+  .home-instagram-title {
     padding-bottom: 20px;
   }
 }

@@ -4,30 +4,30 @@ import { Link } from "react-router-dom";
 
 export default function HomeCategories() {
   return (
-    <div className="LandingCategories">
-      <p className="LandingCategories-Title">EXPLORE OUR BIKES</p>
+    <div className="home-categories">
+      <p className="home-categories-title">EXPLORE OUR BIKES</p>
 
-      <div className="LandingCategories-WindowWrap">
+      <div className="home-categories-windowWrap">
         <Link
           to="/shop/trail"
-          className="LandingCategories-Window LandingCategories-Window1"
+          className="home-categories-window home-categories-window1"
         >
-          <div className="LandingCategories-InnerWindow"></div>
-          <p className="LandingCategories-WindowText">TRAIL</p>
+          <div className="home-categories-innerWindow"></div>
+          <p className="home-categories-windowText">TRAIL</p>
         </Link>
         <Link
           to="/shop/downhill"
-          className="LandingCategories-Window LandingCategories-Window2"
+          className="home-categories-window home-categories-window2"
         >
-          <div className="LandingCategories-InnerWindow"></div>
-          <p className="LandingCategories-WindowText">DOWNHILL</p>
+          <div className="home-categories-innerWindow"></div>
+          <p className="home-categories-windowText">DOWNHILL</p>
         </Link>
         <Link
           to="shop/s-works"
-          className="LandingCategories-Window LandingCategories-Window3"
+          className="home-categories-window home-categories-window3"
         >
-          <div className="LandingCategories-InnerWindow"></div>
-          <p className="LandingCategories-WindowText">S-WORKS</p>
+          <div className="home-categories-innerWindow"></div>
+          <p className="home-categories-windowText">S-WORKS</p>
         </Link>
       </div>
     </div>

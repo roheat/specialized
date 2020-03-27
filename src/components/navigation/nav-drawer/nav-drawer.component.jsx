@@ -3,28 +3,28 @@ import "./nav-drawer.styles.scss";
 import { Link } from "react-router-dom";
 
 export default function NavDrawer({ closeDrawer, drawerStatus }) {
-  let NavDrawerClasses = "NavDrawer";
+  let navDrawerClasses = "nav-drawer";
   if (drawerStatus) {
-    NavDrawerClasses = "NavDrawer ActiveNavDrawer";
+    navDrawerClasses = "nav-drawer active-nav-drawer";
   }
 
   return (
-    <div className={NavDrawerClasses}>
-      <div className="NavDrawerWrap">
-        <div className="NavDrawer-Categories">
-          <div className="NavDrawer-Exit" onClick={closeDrawer}>
-            <div className="NavDrawer-Bar NavDrawer-Bar1"></div>
-            <div className="NavDrawer-Bar NavDrawer-Bar2"></div>
+    <div className={navDrawerClasses}>
+      <div className="nav-drawer-wrap">
+        <div className="nav-drawer-categories">
+          <div className="nav-drawer-exit" onClick={closeDrawer}>
+            <div className="nav-drawer-bar nav-drawer-bar1"></div>
+            <div className="nav-drawer-bar nav-drawer-bar2"></div>
           </div>
 
-          <div className="NavDrawerTabs">
-            <div className="NavDrawer-Shop">
-              <p className="NavDrawer-ShopText">SHOP</p>
+          <div className="nav-drawer-tabs">
+            <div className="nav-drawer-shop">
+              <p className="nav-drawer-shopText">SHOP</p>
             </div>
-            <div className="NavDrawer-InsideSpecialized" onClick={closeDrawer}>
+            <div className="nav-drawer-insideSpecialized" onClick={closeDrawer}>
               <Link
                 to="/inside-specialized"
-                className="NavDrawer-InsideSpecializedText"
+                className="nav-drawer-insideSpecializedText"
               >
                 INSIDE SPECIALIZED
               </Link>
@@ -32,50 +32,50 @@ export default function NavDrawer({ closeDrawer, drawerStatus }) {
           </div>
         </div>
 
-        <div className="NavDrawer-Menu">
-          <ul className="NavDrawer-MenuList">
-            <li className="NavDrawer-MenuItem">
+        <div className="nav-drawer-menu">
+          <ul className="nav-drawer-menuList">
+            <li className="nav-drawer-menuItem">
               <Link
                 to="/shop"
-                className="NavDrawer-MenuLink"
+                className="nav-drawer-menuLink"
                 onClick={closeDrawer}
               >
                 BIKES
               </Link>
             </li>
-            <li className="NavDrawer-MenuItem">
+            <li className="nav-drawer-menuItem">
               <Link
                 to="/shop/trail"
-                className="NavDrawer-MenuLink"
+                className="nav-drawer-menuLink"
                 onClick={closeDrawer}
               >
                 TRAIL
               </Link>
             </li>
-            <li className="NavDrawer-MenuItem">
+            <li className="nav-drawer-menuItem">
               <Link
                 to="/shop/downhill"
-                className="NavDrawer-MenuLink"
+                className="nav-drawer-menuLink"
                 onClick={closeDrawer}
               >
                 DOWNHILL
               </Link>
             </li>
-            <li className="NavDrawer-MenuItem">
+            <li className="nav-drawer-menuItem">
               <Link
                 to="/shop/s-works"
-                className="NavDrawer-MenuLink"
+                className="nav-drawer-menuLink"
                 onClick={closeDrawer}
               >
                 S-WORKS
               </Link>
             </li>
-            <li className="NavDrawer-MenuItem">
+            <li className="nav-drawer-menuItem">
               <a
                 href="https://www.specialized.com/de/en/store-finder"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="NavDrawer-MenuLink"
+                className="nav-drawer-menuLink"
                 onClick={closeDrawer}
               >
                 FIND A RETAILER
@@ -84,7 +84,7 @@ export default function NavDrawer({ closeDrawer, drawerStatus }) {
           </ul>
         </div>
       </div>
-      <p className="NavDrawer-Footer">Made For Riders, By Riders</p>
+      <p className="nav-drawer-Footer">Made For Riders, By Riders</p>
     </div>
   );
 }
