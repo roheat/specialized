@@ -1,4 +1,4 @@
-.ItemSpecs {
+.bike-details-spec {
   width: 100%;
   background-color: #292929;
   display: flex;
@@ -8,19 +8,19 @@
   margin-bottom: 40px;
 }
 
-.ItemSpecs-Wrap {
+.bike-details-spec-wrap {
   width: 100%;
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
 }
 
-.ItemSpecs-LeftColumn {
+.bike-details-spec-leftColumn {
   width: 300px;
   margin-right: 40px;
 }
 
-.ItemSpecs-DownloadManuals {
+.bike-details-spec-downloadManuals {
   width: 250px;
   padding: 20px 15px;
   border: 1px solid #fff;
@@ -32,16 +32,16 @@
   margin-top: 1.7em;
   cursor: pointer;
 }
-.ItemSpecs-DownloadManuals:hover {
+.bike-details-spec-downloadManuals:hover {
   background-color: #262626;
 }
 
-.ItemSpecs-ManualsTitle {
+.bike-details-spec-manualsTitle {
   font-size: 14px;
   font-weight: 500;
 }
 
-.ItemSpecs-ManualsWrap {
+.bike-details-spec-manualsw {
   width: 100%;
   display: none;
   flex-direction: column;
@@ -49,52 +49,52 @@
   justify-content: center;
 }
 
-.ItemSpecs-Manuals {
+.bike-details-spec-manuals {
   font-size: 14px;
   font-weight: 300;
   margin: 10px 0px;
   cursor: pointer;
 }
-.ItemSpecs-Manuals:hover {
+.bike-details-spec-manuals:hover {
   color: #a5a5a5;
 }
 
-.ItemSpecs-RightColumn {
+.bike-details-spec-rightColumn {
   width: auto;
   padding: 0px 20px;
 }
 
-.ItemSpecs-Title {
+.bike-details-spec-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.ItemSpecs-TableHeaderRow {
+.bike-details-spec-tableHeaderRow {
   width: 100%;
   margin-bottom: 10px;
 }
 
-.ItemSpecs-TableHeader {
+.bike-details-spec-tableHeader {
   font-size: 16px;
   font-weight: 600;
 }
 
-.ItemSpecs-Table {
+.bike-details-spec-Table {
   margin-bottom: 40px;
 }
 
-.ItemSpecs-TableRow {
+.bike-details-spec-tableRow {
   width: 100%;
 }
 
-.ItemSpec-TableData {
+.item-spec-table-data {
   font-size: 11px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.TableData-Main {
+.table-data-main {
   font-size: 10px;
   font-weight: 600;
   white-space: nowrap;
@@ -107,32 +107,32 @@
   text-align: left;
 }
 
-.ItemSpecs-Disclaimer {
+.bike-details-spec-disclaimer {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 40d;
 }
 
 @media screen and (max-width: 1000px) {
-  .ItemSpecs {
+  .bike-details-spec {
     padding: 0 20px;
   }
-  .ItemSpecs-Wrap {
+  .bike-details-spec-wrap {
     flex-direction: column;
   }
-  .ItemSpecs-DownloadManuals {
+  .bike-details-spec-downloadManuals {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .ItemSpecs-LeftColumn {
+  .bike-details-spec-leftColumn {
     margin: 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .TableData-Main {
+  .table-data-main {
     width: 150px;
   }
 }

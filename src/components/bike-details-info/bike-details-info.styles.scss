@@ -1,24 +1,24 @@
-.Description-Demo8 {
+.bike-details-info {
   width: 100%;
   padding: 40px 20px;
   display: flex;
   justify-content: center;
 }
 
-.Description-StumpJumperPro29-Wrap {
+.bike-details-info-wrap {
   width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.Description-Text {
+.bike-details-info-text {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 20px;
 }
 
-.Description-Button {
+.bike-details-info-button {
   font-size: 14px;
   margin: 50px 0;
   margin-top: 20px;
@@ -26,24 +26,24 @@
   cursor: pointer;
 }
 
-.Description-List {
+.bike-details-info-list {
   list-style-type: disc;
   padding-left: 20px;
 }
 
 @media screen and (max-width: 1000px) {
-  .Description-StumpJumperPro29-Wrap {
+  .bike-details-info-wrap {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .Description-Button {
+  .bike-details-info-button {
     margin: 0;
     margin-bottom: 30px;
     font-size: 12px;
   }
-  .Description-Text {
+  .bike-details-info-text {
     font-size: 12px;
   }
 }

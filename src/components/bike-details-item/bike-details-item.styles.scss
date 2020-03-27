@@ -1,71 +1,50 @@
-.ItemCard-Demo8 {
+.bike-details-item {
   width: 100%;
   position: relative;
 }
 
-.ItemCardWrap {
+.bike-details-item-wrap {
   width: 100%;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.ItemCard-Column {
-}
-
-.ItemCard-Column2 {
+.bike-details-item-column2 {
   display: flex;
   padding-top: 1em;
 }
 
-.ItemCard-Name {
+.bike-details-item-name {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 0.5em;
 }
 
-.ItemCard-PricePart {
+.bike-details-item-price-part {
   display: flex;
   align-items: center;
 }
 
-.ItemCard-Price {
+.bike-details-item-price {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 0.2em;
 }
 
-.ItemCard-PartNumber {
+.bike-details-item-partNumber {
   font-size: 14px;
   margin-right: 3em;
 }
-.ItemCard-Color {
+.bike-details-item-color {
   font-size: 14px;
 }
 
-.ItemCard-Form {
-  align-self: flex-start;
-  border-radius: 0px;
-}
-
-.ItemCard-Select {
-  width: 150px;
-  height: 50px;
-  border: none;
-  border: 1px solid #141414;
-  border-radius: 0px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.ItemCard-Option {
-}
-
-.ItemCard-ButtonWrap {
+.bike-details-item-buttonWrap {
   display: flex;
 }
 
-.ItemCard-Button {
+.bike-details-item-button {
   height: 50px;
   padding: 0 20px;
   margin: 0 5px;
@@ -80,91 +59,74 @@
   cursor: pointer;
 }
 
-.BG-Red {
-  background-color: #d32e2e;
-  border: none;
-  color: #fff;
-}
-.BG-Red:hover {
-  background-color: rgb(179, 39, 39);
-}
-
-.ItemCard-WishList {
+.bike-details-item-wishList {
   font-size: 12px;
   margin-top: 15px;
   cursor: pointer;
 }
 
-.ItemCard-WishList:hover {
+.bike-details-item-wishList:hover {
   color: #d32e2e;
 }
 
-.ItemCard-Stock {
+.bike-details-item-stock {
   font-size: 12px;
   margin-top: 15px;
 }
 
 @media screen and (max-width: 1000px) {
-  .ItemCardWrap {
+  .bike-details-item-wrap {
     flex-direction: column;
     padding: 30px 20px;
   }
-  .ItemCard-PricePart {
+  .bike-details-item-price-part {
     flex-direction: column;
     align-items: flex-start;
   }
-  .ItemCard-PartNumber {
+  .bike-details-item-partNumber {
     margin: 0;
     margin-top: 10px;
   }
-  .ItemCard-Column {
+  .bike-details-item-column {
     width: 100%;
     flex-direction: column;
   }
-  .ItemCard-Column2 {
+  .bike-details-item-column2 {
     flex-direction: column;
     margin-bottom: 30px;
   }
-  .ItemCard-Color {
+  .bike-details-item-color {
     align-self: flex-start;
     margin-top: 20px;
     margin-bottom: 10px;
   }
 
-  .ItemCard-Form {
-    width: 100%;
-  }
-
-  .ItemCard-Select {
-    width: 100%;
-  }
-
-  .ItemCard-ButtonWrap {
+  .bike-details-item-buttonWrap {
     flex-direction: column;
   }
-  .ItemCard-Button {
+  .bike-details-item-button {
     margin: 5px 0;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .ItemCard-Name {
+  .bike-details-item-name {
     font-size: 16px;
     margin-bottom: 5px;
   }
-  .ItemCard-Price {
+  .bike-details-item-price {
     font-size: 14px;
   }
-  .ItemCard-PartNumber {
+  .bike-details-item-partNumber {
     font-size: 12px;
   }
-  .ItemCard-Color {
+  .bike-details-item-color {
     font-size: 12px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .ItemCardWrap {
+  .bike-details-itemWrap {
     padding: 40px 20px;
   }
 }

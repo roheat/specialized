@@ -9,20 +9,22 @@ import "./bike-details-item.styles.scss";
 function BikeDetailsItem({ bikeDetails, addCartItem }) {
   const { name, price, partNumber } = bikeDetails;
   return (
-    <div className="ItemCard-Demo8">
-      <div className="ItemCardWrap">
-        <div className="ItemCard-Column">
-          <p className="ItemCard-Name">{name}</p>
-          <div className="ItemCard-PricePart">
-            <p className="ItemCard-Price">${price}</p>
+    <div className="bike-details-item">
+      <div className="bike-details-item-wrap">
+        <div className="bike-details-item-column">
+          <p className="bike-details-item-name">{name}</p>
+          <div className="bike-details-item-price-part">
+            <p className="bike-details-item-price">${price}</p>
           </div>
         </div>
-        <div className="ItemCard-Column ItemCard-Column2">
-          <p className="ItemCard-PartNumber">Part {partNumber}</p>
-          <p className="ItemCard-Color">Red / Yellow / Black / Metallic Blue</p>
+        <div className="bike-details-item-column bike-details-item-column2">
+          <p className="bike-details-item-partNumber">Part {partNumber}</p>
+          <p className="bike-details-item-color">
+            Red / Yellow / Black / Metallic Blue
+          </p>
         </div>
-        <div className="ItemCard-Column">
-          <div className="ItemCard-ButtonWrap">
+        <div className="bike-details-item-column">
+          <div className="bike-details-item-buttonWrap">
             <CustomButton red onClick={() => addCartItem(bikeDetails)}>
               Add to cart
             </CustomButton>
@@ -30,14 +32,14 @@ function BikeDetailsItem({ bikeDetails, addCartItem }) {
               href="https://www.specialized.com/de/en/store-finder"
               target="_blank"
               rel="noopener noreferrer"
-              className="ItemCard-Button"
+              className="bike-details-item-button"
             >
               FIND NEAR BY
             </a>
           </div>
 
-          <p className="ItemCard-WishList">+ WISHLIST</p>
-          <p className="ItemCard-Stock" style={{ color: "#009e2a" }}>
+          <p className="bike-details-item-wishList">+ WISHLIST</p>
+          <p className="bike-details-item-stock" style={{ color: "#009e2a" }}>
             IN STOCK
           </p>
         </div>
