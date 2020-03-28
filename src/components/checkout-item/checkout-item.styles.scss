@@ -20,6 +20,11 @@
   .quantity,
   .price {
     width: 23%;
+
+    @media screen and (max-width: 600px) {
+      font-size: 12px !important;
+      width: 30%;
+    }
   }
 
   .quantity {
@@ -31,6 +36,12 @@
 
     .value {
       margin: 0 10px;
+    }
+    @media screen and (max-width: 600px) {
+      margin-left: 1.5em;
+      .value {
+        margin: 0 5px;
+      }
     }
   }
 
