@@ -17,6 +17,7 @@ import MobileFooter from "./components/footer/mobile-footer/mobile-footer.compon
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
+import ScrollToTop from "./utils/scrollToTop";
 
 import "./App.scss";
 
@@ -46,38 +47,40 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="AppInner">
-          <FullNav />
-          <MobileNav />
+      <ScrollToTop>
+        <div className="App">
+          <div className="AppInner">
+            <FullNav />
+            <MobileNav />
 
-          <div className="AppContentWrap">
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route path="/shop" component={BikesPage} />
-              <Route exact path="/checkout" component={CheckoutPage} />
-              <Route
-                exact
-                path="/inside-specialized"
-                component={InsideSpecialized}
-              />
-              <Route
-                exact
-                path="/sign-in"
-                render={() =>
-                  this.props.currentUser ? (
-                    <Redirect to="/" />
-                  ) : (
-                    <SignInAndSignUpPage />
-                  )
-                }
-              />
-            </Switch>
+            <div className="AppContentWrap">
+              <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/shop" component={BikesPage} />
+                <Route exact path="/checkout" component={CheckoutPage} />
+                <Route
+                  exact
+                  path="/inside-specialized"
+                  component={InsideSpecialized}
+                />
+                <Route
+                  exact
+                  path="/sign-in"
+                  render={() =>
+                    this.props.currentUser ? (
+                      <Redirect to="/" />
+                    ) : (
+                      <SignInAndSignUpPage />
+                    )
+                  }
+                />
+              </Switch>
+            </div>
+            <FullFooter />
+            <MobileFooter />
           </div>
-          <FullFooter />
-          <MobileFooter />
         </div>
-      </div>
+      </ScrollToTop>
     );
   }
 }
