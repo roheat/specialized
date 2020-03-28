@@ -6,19 +6,23 @@ import BikeDetailsSlider from "../../components/bike-details-slider/bike-details
 import BikeDetailsItem from "../../components/bike-details-item/bike-details-item.component";
 import BikeDetailsSpec from "../../components/bike-details-spec/bike-details-spec.component";
 import BikeDetailsInfo from "../../components/bike-details-info/bike-details-info.component";
+import NotFoundPage from "../404/404.component";
 
 import "./bike-details.styles.scss";
 
-const BikeDetailsPage = ({ bikeDetails }) => (
-  <div className="bike-details">
-    <div className="bike-details-wrap">
-      <BikeDetailsSlider bikeDetails={bikeDetails} />
-      <BikeDetailsItem bikeDetails={bikeDetails} />
-      <BikeDetailsInfo />
-      <BikeDetailsSpec />
+const BikeDetailsPage = ({ bikeDetails }) => {
+  if (!bikeDetails) return <NotFoundPage />;
+  return (
+    <div className="bike-details">
+      <div className="bike-details-wrap">
+        <BikeDetailsSlider bikeDetails={bikeDetails} />
+        <BikeDetailsItem bikeDetails={bikeDetails} />
+        <BikeDetailsInfo />
+        <BikeDetailsSpec />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const mapStateToProps = (state, props) => {
   const { categoryId, bikeId } = props.match.params;

@@ -8,6 +8,7 @@ import BikesPage from "./pages/bikes/bikes.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import InsideSpecialized from "./pages/inside-specialized/inside-specialized.component";
+import NotFoundPage from "./pages/404/404.component";
 
 import FullNav from "./components/navigation/full-nav/full-nav.component";
 import MobileNav from "./components/navigation/mobile-nav/mobile-nav.component";
@@ -74,6 +75,7 @@ class App extends React.Component {
                     )
                   }
                 />
+                <Route component={NotFoundPage} />
               </Switch>
             </div>
             <FullFooter />
