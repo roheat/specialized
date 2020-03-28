@@ -53,4 +53,14 @@
       background-color: rgb(179, 39, 39);
     }
   }
+
+  &.disabled {
+    background-color: #c1c1c1;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      background-color: #c1c1c1;
+    }
+  }
 }
