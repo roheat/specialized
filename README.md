@@ -1,9 +1,10 @@
-# [Specialized](https://roheat.com/)
+# [Specialized](https://specialized-react.herokuapp.com/)
 
 ![Specialized](screenshots/home-page.gif)
-![Specialized-demo](screenshots/demo.gif)
 
 > An online e-commerce bike shop built with React, Redux and Firebase.
+
+![Specialized-demo](screenshots/demo.gif)
 
 ---
 
@@ -24,7 +25,7 @@ Specialized is a globally famous brand that builds the best quality terrain bike
 
 I have created a front end web app similar to the [specialized website](https://www.specialized.com/). The app has a clean and responsive UI, and a fully functional cart where a user can Add/Edit/Delete items.
 
-Have a look at the Live version [here](https://roheat.com/).
+Have a look at the Live version [here](https://specialized-react.herokuapp.com/).
 
 #### Technologies
 
