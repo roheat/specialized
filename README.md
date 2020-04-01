@@ -1,68 +1,118 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Specialized](https://roheat.com/)
 
-## Available Scripts
+![Specialized](screenshots/home-page.gif)
+![Specialized-demo](screenshots/demo.gif)
 
-In the project directory, you can run:
+> An online e-commerce bike shop built with React, Redux and Firebase.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [Description](#description)
+- [Installation](#installation)
+- [What I Learned](#what-i-learned)
+- [References](#references)
+- [License](#license)
+- [Info](#info)
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `yarn build`
+Specialized is a globally famous brand that builds the best quality terrain bikes.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I have created a front end web app similar to the [specialized website](https://www.specialized.com/). The app has a clean and responsive UI, and a fully functional cart where a user can Add/Edit/Delete items.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Have a look at the Live version [here](https://roheat.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Technologies
 
-### `yarn eject`
+- React with Redux
+- Firebase
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Features
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigation and dynamic routing
+- Add/Edit/Delete items to cart
+- Firebase google and email authorization
+- Firestore for storage
+- Cart details persisted in session storage
+- Stripe API integration for payment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Installation
 
-## Learn More
+#### `Step 1` - Clone the repo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+$ git clone https://github.com/roheat/specialized
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### `Step 2` - cd in the repo
 
-### Code Splitting
+```bash
+$ cd specialized
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### `Step 3` - Install dependencies
 
-### Analyzing the Bundle Size
+```bash
+$ npm install
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+#### `Step 4` - [Add Firebase to the project](https://firebase.google.com/docs/web/setup) and provide your app's Firebase project configuration to `/src/firebase/firebase.utils.js`.
 
-### Making a Progressive Web App
+#### `Step 5` - Run application
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```bash
+$ npm start
+```
 
-### Advanced Configuration
+In browser, open [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+---
 
-### Deployment
+## What I Learned
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- Single page application routing using react router
+- Wiring up redux by setting up the store, reducers, actions
+- Working with selectors
+- Setting up folder architecture for a large project
+- Using firebase with react
+- Authentication with email and password using firebase
+- Working with SASS
+- Persisting redux store data into session storage using redux-persist
+- Working with nested routes
+- Integrating Stripe API
+- Deployment using heroku
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## References
+
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Firebase](https://firebase.google.com/docs)
+- [redux-persist](https://github.com/rt2zz/redux-persist)
+- [Specialized](https://www.specialized.com/)
+
+---
+
+## License
+
+MIT © [roheat](https://github.com/roheat)
+
+---
+
+## Info
+
+- Website - [roheat.com](https://roheat.com)
+- Twitter - [@roheatdotcom](https://twitter.com/roheatdotcom)
+- LinkedIn - [Rohith Srivathsav](https://www.linkedin.com/in/rohith-srivathsav/)
+
+<div align="center">
+  <sub>If you find a bug or improvement, feel free to raise an issue and send a PR!</sub>
+</div>
